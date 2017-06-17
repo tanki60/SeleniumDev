@@ -1,0 +1,16 @@
+# THIS FILE WILL PROVIDE A OVERVIEW OF TESTCASES UNDER 'tests' PACKAGE
+
+#Location: Test-Run folder
+
+#caseOne.xml
+-Register New User
+-Update User Profile
+-Sign Out
+
+#caseTwo.xml
+-Goto home page
+-Select Hotels tab
+-Search
+-Update Results filter
+-Search
+-Confirm output

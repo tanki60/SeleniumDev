@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
+  <parameter name="browser" value="Firefox"/>
+  <listeners>
+    <listener class-name="com.automation.listeners.CommonListener"/>
+  </listeners>
+  <test name="SomeTest(failed)">
+    <classes>
+      <class name="com.automation.CaseOneTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="updateProfile"/>
+          <include name="signOut"/>
+          <include name="register"/>
+        </methods>
+      </class> <!-- com.automation.CaseOneTest -->
+    </classes>
+  </test> <!-- SomeTest(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

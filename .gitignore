@@ -1,0 +1,6 @@
+## Ignore backup files for testsuites 
+
+# User specified files
+**/bin/
+*.jar
+*.exe
