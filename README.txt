@@ -15,7 +15,7 @@ Design Pattern: Page Object Model.
 
 Please also read the 'TestRun-Overview.txt' for details on what each test does.
 
-oh, you can see the 'test-output' and 'Custom-Report' folders for generic and custom reports (index.html, and Custom-Report-*.html)- don't judge just yet! haha.
+oh, you can see the 'test-output' and 'custom-report' folders for generic and custom reports (index.html, and custom-report-*.html)- don't judge just yet! haha.
 
 
 Next on Selenium: Docker container for nodes to use Selenium Grid.
