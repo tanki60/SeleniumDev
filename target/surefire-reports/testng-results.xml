@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+    <line>
+      <![CDATA[About to begin executing Suite Regression Suite]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing Test SomeTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseSuite.beforeClass]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseSuite.beforeClass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.logStartTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.register]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.register]]>
+    </line>
+    <line>
+      <![CDATA[Test Method resides in com.automation.CaseOneTest]]>
+    </line>
+    <line>
+      <![CDATA[Test Status: Pass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.logStartTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.updateProfile]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.updateProfile]]>
+    </line>
+    <line>
+      <![CDATA[Test Method resides in com.automation.CaseOneTest]]>
+    </line>
+    <line>
+      <![CDATA[Test Status: Pass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.logStartTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.signOut]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.signOut]]>
+    </line>
+    <line>
+      <![CDATA[Test Method resides in com.automation.CaseOneTest]]>
+    </line>
+    <line>
+      <![CDATA[Test Status: Pass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseSuite.afterClass]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
+    </line>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="111627" started-at="2017-06-19T02:48:33Z" finished-at="2017-06-19T02:50:24Z">
+    <groups>
+    </groups>
+    <test name="SomeTest" duration-ms="111627" started-at="2017-06-19T02:48:33Z" finished-at="2017-06-19T02:50:24Z">
+      <class name="com.automation.CaseOneTest">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="beforeClass" is-config="true" duration-ms="56178" started-at="2017-06-18T22:48:33Z" finished-at="2017-06-18T22:49:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseSuite.beforeClass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="register()[pri:1, instance:com.automation.CaseOneTest@4d560eeb]" name="register" duration-ms="14389" started-at="2017-06-18T22:49:29Z" finished-at="2017-06-18T22:49:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.register]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in com.automation.CaseOneTest]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="logStartTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="logStartTimeForEachTest" is-config="true" duration-ms="0" started-at="2017-06-18T22:49:29Z" finished-at="2017-06-18T22:49:29Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logStartTimeForEachTest -->
+        <test-method status="PASS" signature="logEndTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="logEndTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-18T22:49:43Z" finished-at="2017-06-18T22:49:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logEndTimeForEachTest -->
+        <test-method status="PASS" signature="logStartTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="logStartTimeForEachTest" is-config="true" duration-ms="0" started-at="2017-06-18T22:49:43Z" finished-at="2017-06-18T22:49:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logStartTimeForEachTest -->
+        <test-method status="PASS" signature="updateProfile()[pri:2, instance:com.automation.CaseOneTest@4d560eeb]" name="updateProfile" duration-ms="18486" started-at="2017-06-18T22:49:43Z" finished-at="2017-06-18T22:50:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.updateProfile]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in com.automation.CaseOneTest]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- updateProfile -->
+        <test-method status="PASS" signature="logEndTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="logEndTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-18T22:50:02Z" finished-at="2017-06-18T22:50:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logEndTimeForEachTest -->
+        <test-method status="PASS" signature="logStartTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="logStartTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-18T22:50:02Z" finished-at="2017-06-18T22:50:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logStartTimeForEachTest -->
+        <test-method status="PASS" signature="signOut()[pri:3, instance:com.automation.CaseOneTest@4d560eeb]" name="signOut" duration-ms="9244" started-at="2017-06-18T22:50:02Z" finished-at="2017-06-18T22:50:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.signOut]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in com.automation.CaseOneTest]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- signOut -->
+        <test-method status="PASS" signature="logEndTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="logEndTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-18T22:50:11Z" finished-at="2017-06-18T22:50:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logEndTimeForEachTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.CaseOneTest@4d560eeb]" name="afterClass" is-config="true" duration-ms="13298" started-at="2017-06-18T22:50:11Z" finished-at="2017-06-18T22:50:24Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automation.CaseOneTest -->
+    </test> <!-- SomeTest -->
+  </suite> <!-- Regression Suite -->
+</testng-results>

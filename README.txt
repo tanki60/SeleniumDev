@@ -4,7 +4,7 @@ learning and implementing different modules/functionalities of Selenium 2.0 fram
 I have started this project on my own, with the help of online materials, and surely Google! :)
 
 Design Pattern: Page Object Model.
-# Selenium 2.53.1
+# Selenium 2.53.0
 # Firefox 45.0.1 ESR
 # Firebug 2.0.19
 # Java

@@ -1,131 +1,168 @@
 package com.automation.listeners;
 
 import org.testng.IInvokedMethod;
-
+ 
 import org.testng.IInvokedMethodListener;
-
+ 
 import org.testng.ISuite;
-
+ 
 import org.testng.ISuiteListener;
-
+ 
 import org.testng.ITestContext;
-
+ 
 import org.testng.ITestListener;
-
+ 
 import org.testng.ITestNGMethod;
-
+ 
 import org.testng.ITestResult;
-
+ 
 import org.testng.Reporter;
-
+ 
 public class CommonListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
-
+ 
 	// This belongs to ISuiteListener and will execute before the Suite start
-
-	public void onStart(ISuite context) {
-
-		Reporter.log(
-				"ISuite onStart==> " + " Suite Name: " + context.getName() + " ==> Suite START TIME: " + System.currentTimeMillis()
-						/ 1000, true);
+ 
+	public void onStart(ISuite suite) {
+ 
+		Reporter.log("About to begin executing Suite " + suite.getName(), true);
+ 
 	}
-
+ 
 	// This belongs to ISuiteListener and will execute, once the Suite is finished
-	public void onFinish(ISuite context) {
 
-		Reporter.log(
-				"ISuite onFinish==> " + " Suite Name: " + context.getName() + " ==> Suite END TIME: " + System.currentTimeMillis()
-						/ 1000, true);
+ 
+	// This belongs to ITestListener and will execute before starting of Test set/batch 
+ 
+	public void onStart(ITestContext arg0) {
+ 
+		Reporter.log("About to begin executing Test " + arg0.getName(), true);
+ 
 	}
-
-	// This belongs to ITestListener and will execute before starting of Test
-	// set/batch
-
-	public void onStart(ITestContext context) {
-
-		Reporter.log("ITestContext onStart==> About to begin executing Test " + context.getName(), true);
-
+ 
+	// This belongs to ITestListener and will execute, once the Test set/batch is finished
+ 
+	public void onFinish(ITestContext arg0) {
+ 
+		Reporter.log("Completed executing test " + arg0.getName(), true);
+ 
 	}
-
-	// This belongs to ITestListener and will execute, once the Test set/batch
-	// is finished
-
-	public void onFinish(ITestContext context) {
-
-		Reporter.log("ITestContext onFinish==> Completed executing test " + context.getName(), true);
-
-	}
-
+ 
 	// This belongs to ITestListener and will execute only when the test is pass
-
-	public void onTestSuccess(ITestResult context) {
-
+ 
+	public void onTestSuccess(ITestResult arg0) {
+ 
 		// This is calling the printTestResults method
-		Reporter.log("ITestResult onTestSuccess==> "+" Test Name: " + context.getName() + " END TIME: " + System.currentTimeMillis()/1000);
-
+ 
+		printTestResults(arg0);
+ 
 	}
-
-	// This belongs to ITestListener and will execute only on the event of fail
-	// test
-
-	public void onTestFailure(ITestResult context) {
-
+ 
+	// This belongs to ITestListener and will execute only on the event of fail test
+ 
+	public void onTestFailure(ITestResult arg0) {
+ 
 		// This is calling the printTestResults method
-		Reporter.log("ITestResult onTestFailure==> "+" Test Name: " + context.getName() + " END TIME: " + System.currentTimeMillis()/1000);
+ 
+		printTestResults(arg0);
+ 
 	}
-
-	// This belongs to ITestListener and will execute before the main test start
-	// (@Test)
-
-	public void onTestStart(ITestResult context) {
-
-		Reporter.log("ITestResult onTestStart==> "+" Test Name: " + context.getName() + " START TIME: " + System.currentTimeMillis()/1000);
-
+ 
+	// This belongs to ITestListener and will execute before the main test start (@Test)
+ 
+	public void onTestStart(ITestResult arg0) {
+ 
+		System.out.println("The execution of the main test starts now");
+ 
 	}
-
-	// This belongs to ITestListener and will execute only if any of the main
-	// test(@Test) get skipped
-
-	public void onTestSkipped(ITestResult context) {
-
-		Reporter.log("ITestResult onTestSkipped==> "+" Test Name: " + context.getName());
-
+ 
+	// This belongs to ITestListener and will execute only if any of the main test(@Test) get skipped
+ 
+	public void onTestSkipped(ITestResult arg0) {
+ 
+		printTestResults(arg0);
+ 
 	}
-
-
-	// This belongs to IInvokedMethodListener and will execute before every
-	// method including @Before @After @Test
-
-	public void beforeInvocation(IInvokedMethod context, ITestResult arg1) {
-
-		String textMsg = "About to begin executing following method : " + returnMethodName(context.getTestMethod());
-
+	
+	private void printTestResults(ITestResult result) {
+		 
+		Reporter.log("Test Method resides in " + result.getTestClass().getName(), true);
+ 
+		if (result.getParameters().length != 0) {
+ 
+			String params = null;
+ 
+			for (Object parameter : result.getParameters()) {
+ 
+				params += parameter.toString() + ",";
+ 
+			}
+ 
+			Reporter.log("Test Method had the following parameters : " + params, true);
+ 
+		}
+ 
+		String status = null;
+ 
+		switch (result.getStatus()) {
+ 
+		case ITestResult.SUCCESS:
+ 
+			status = "Pass";
+ 
+			break;
+ 
+		case ITestResult.FAILURE:
+ 
+			status = "Failed";
+ 
+			break;
+ 
+		case ITestResult.SKIP:
+ 
+			status = "Skipped";
+ 
+		}
+ 
+		Reporter.log("Test Status: " + status, true);
+ 
+	}
+ 
+	// This belongs to IInvokedMethodListener and will execute before every method including @Before @After @Test
+ 
+	public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
+ 
+		String textMsg = "About to begin executing following method : " + returnMethodName(arg0.getTestMethod());
+ 
 		Reporter.log(textMsg, true);
-
+ 
 	}
-
-	// This belongs to IInvokedMethodListener and will execute after every
-	// method including @Before @After @Test
-
-	public void afterInvocation(IInvokedMethod context, ITestResult arg1) {
-
-		String textMsg = "Completed executing following method : " + returnMethodName(context.getTestMethod());
-
+ 
+	// This belongs to IInvokedMethodListener and will execute after every method including @Before @After @Test
+ 
+	public void afterInvocation(IInvokedMethod arg0, ITestResult arg1) {
+ 
+		String textMsg = "Completed executing following method : " + returnMethodName(arg0.getTestMethod());
+ 
 		Reporter.log(textMsg, true);
-
+ 
 	}
-
+ 
 	// This will return method names to the calling function
-
+ 
 	private String returnMethodName(ITestNGMethod method) {
-
+ 
 		return method.getRealClass().getSimpleName() + "." + method.getMethodName();
-
+ 
 	}
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
-		//Not needed for now
 		
 	}
 
+	public void onFinish(ISuite suite) {
+		// TODO Auto-generated method stub
+		
+	}
+ 
 }
