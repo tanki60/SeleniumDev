@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>HomePage all Tabs</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 20 12:02:12 EDT 2017</td>
+<td>Started on:</td><td>Tue Jun 20 12:56:07 EDT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>75 seconds (75469 ms)</td>
+<tr><td>Total time:</td><td>62 seconds (62453 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,113 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.automation.CaseThreeTest.continueAsGuest()'><b>continueAsGuest</b><br>Test class: com.automation.CaseThreeTest<br/>
-<a href="#Output-1816724006" onClick='toggleBox("Output-1816724006", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1816724006" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1816724006">
-Completed executing following method : CaseThreeTest.continueAsGuest<br/>
-Test Method resides in com.automation.CaseThreeTest<br/>
-Test Status: Failed<br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;select2-drop&apos;]/div/input&quot;}
-Command duration or timeout: 30.08 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;Eclipse&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0&apos;
-*** Element info: {Using=xpath, value=//div[@id=&apos;select2-drop&apos;]/div/input}
-Session ID: 7b5972c8-0762-4512-9dd4-9aa98085402d
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at $Proxy10.sendKeys(Unknown Source)
-	at com.automation.dto.BookAsGuest.clikAndSelectCountry(BookAsGuest.java:114)
-	at com.automation.CaseThreeTest.continueAsGuest(CaseThreeTest.java:49)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;select2-drop&apos;]/div/input&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;Eclipse&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Tanky/AppData/Local/Temp/anonymous3745913705627602285webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Tanky/AppData/Local/Temp/anonymous3745913705627602285webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1816724006", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1816724006'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;select2-drop&apos;]/div/input&quot;}
-Command duration or timeout: 30.08 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;Eclipse&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0&apos;
-*** Element info: {Using=xpath, value=//div[@id=&apos;select2-drop&apos;]/div/input}
-Session ID: 7b5972c8-0762-4512-9dd4-9aa98085402d
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at $Proxy10.sendKeys(Unknown Source)
-	at com.automation.dto.BookAsGuest.clikAndSelectCountry(BookAsGuest.java:114)
-	at com.automation.CaseThreeTest.continueAsGuest(CaseThreeTest.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;select2-drop&apos;]/div/input&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;Eclipse&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Tanky/AppData/Local/Temp/anonymous3745913705627602285webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Tanky/AppData/Local/Temp/anonymous3745913705627602285webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-</pre></div></td>
-<td>33</td>
-<td>com.automation.CaseThreeTest@773cf42a</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -182,11 +75,25 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.automation.CaseThreeTest.featuredHotel()'><b>featuredHotel</b><br>Test class: com.automation.CaseThreeTest<br/>
-<a href="#Output-1240599002" onClick='toggleBox("Output-1240599002", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.automation.CaseThreeTest.continueAsGuest()'><b>continueAsGuest</b><br>Test class: com.automation.CaseThreeTest<br/>
+<a href="#Output-842408254" onClick='toggleBox("Output-842408254", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1240599002" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1240599002">
+<a href="#Output-842408254" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-842408254">
+Completed executing following method : CaseThreeTest.continueAsGuest<br/>
+Test Method resides in com.automation.CaseThreeTest<br/>
+Test Status: Pass<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.automation.CaseThreeTest@773cf42a</td></tr>
+<tr>
+<td title='com.automation.CaseThreeTest.featuredHotel()'><b>featuredHotel</b><br>Test class: com.automation.CaseThreeTest<br/>
+<a href="#Output-337164861" onClick='toggleBox("Output-337164861", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-337164861" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-337164861">
 Completed executing following method : CaseThreeTest.featuredHotel<br/>
 Test Method resides in com.automation.CaseThreeTest<br/>
 Test Status: Pass<br/>

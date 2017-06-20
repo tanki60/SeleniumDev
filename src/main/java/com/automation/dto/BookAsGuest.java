@@ -1,6 +1,7 @@
 package com.automation.dto;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,8 +39,8 @@ public class BookAsGuest {
 	private WebElement	address;
 
 	// javascript
-	//@FindBy(xpath = "//a[@class='select2-choice']/span[1]")
-	//private WebElement	countryDrpDwn;
+	@FindBy(xpath = "//a[@class='select2-choice']/span[1]")
+	private WebElement	countryDrpDwn;
 
 	@FindBy(xpath = "//div[@id='select2-drop']/div/input")
 	private WebElement	pickCountry;
@@ -109,8 +110,8 @@ public class BookAsGuest {
 	}
 
 	public void clikAndSelectCountry() {
-
-		GenericMethods.javaScriptClickByPath(driver, "//div[@class='select2-container chosen-select']", true);
+		countryDrpDwn = countryDrpDwn.findElement(By.xpath("//a[@class='select2-choice']/span[1]"));
+		countryDrpDwn.click();
 		pickCountry.sendKeys("aus");
 		pickCountry.sendKeys(Keys.ENTER);
 
@@ -121,7 +122,6 @@ public class BookAsGuest {
 	public void addExtras() {
 
 		GenericMethods.javaScriptClickByElementLocation(driver, extraOptions, "y");
-		// extraOptions.click();
 		log.info("Completed addAirportPickUp ");
 	}
 
