@@ -1,6 +1,7 @@
 # THIS FILE WILL PROVIDE A OVERVIEW OF TESTCASES UNDER 'tests' PACKAGE
 
-#Location: Test-Run folder
+#Location: test-suites folder
+
 
 #caseOne.xml
 -Register New User
@@ -14,3 +15,16 @@
 -Update Results filter
 -Search
 -Confirm output
+
+#caseThree.xml
+-Goto home page
+-Select Featured HOtel Deals
+-Update Search options
+-Book as Guest by adding info
+-Confirm booking
+
+#smoke.xml (in-progress)
+-Goto Home
+-Click on Tab for Hotel, Car, Tours, Flight one at a time
+-Fill in Details
+-Sign Out
