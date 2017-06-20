@@ -1,7 +1,5 @@
 package com.automation.dto;
 
-
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,61 +9,59 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.automation.util.GenericMethods;
 
-
-
 /*
  * This is the landing page for Kayak.com, which by default is Hotels tab
  */
 public class HotelsTab {
 
-	static Logger	log	= Logger.getLogger(HotelsTab.class);
+	static Logger		log	= Logger.getLogger(HotelsTab.class);
 
-	WebDriver		driver;
-
-	@FindBy(xpath = "//div[contains(@id,'s2id') and contains(@class,'hotelsearch')]/a")
-	WebElement		hotelTextBox;
+	private WebDriver	driver;
 
 	@FindBy(xpath = "//div[contains(@id,'s2id') and contains(@class,'hotelsearch')]/a")
-	WebElement		hotelSearchText;
+	WebElement			hotelTextBox;
+
+	@FindBy(xpath = "//div[contains(@id,'s2id') and contains(@class,'hotelsearch')]/a")
+	WebElement			hotelSearchText;
 
 	@FindBy(xpath = "//div[@id='select2-drop']/ul/li/ul/li")
-	WebElement		hotelListOption;
+	WebElement			hotelListOption;
 
 	@FindBy(xpath = "//div[@class='RTL_Bar searcharea']/div/ul/li/a[@href='#HOTELS']")
-	WebElement		hotelTab;
+	WebElement			hotelTab;
 
 	@FindBy(xpath = "//select[@id='adults']")
-	WebElement		numOfAdultDrpDwn;
+	WebElement			numOfAdultDrpDwn;
 
 	@FindBy(xpath = "//select[@id='child']")
-	WebElement		numOfChildDrpDwn;
+	WebElement			numOfChildDrpDwn;
 
 	@FindBy(xpath = "//div[@id='ages' and contains(@style, 'color:')]//button[@class='btn btn-primary']")
-	WebElement		childAgePopUp;
+	WebElement			childAgePopUp;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu' and (contains (@style, 'top'))]//div[@class='datepicker-days']/table/tbody/tr[3]/td[@class='day '][1]")
-	WebElement		startDate;
+	WebElement			startDate;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu' and contains(@style, 'top:')]/div[@style='display: block;']/table/tbody/tr[4]/td[3]")
-	WebElement		endDate;
+	WebElement			endDate;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu' and (contains (@style, 'top'))]/div[@class='datepicker-days']/table/thead/tr[1]/th[3]")
-	WebElement		skipStartMonth;
+	WebElement			skipStartMonth;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu' and (contains (@style, 'top'))]/div[@class='datepicker-days']/table/thead/tr[1]/th[3]")
-	WebElement		skipEndMonth;
+	WebElement			skipEndMonth;
 
 	@FindBy(xpath = "//input[@name='checkin']")
-	WebElement		calenderStartIcon;
+	WebElement			calenderStartIcon;
 
 	@FindBy(xpath = "//input[@name='checkout']")
-	WebElement		calenderEndIcon;
+	WebElement			calenderEndIcon;
 
 	@FindBy(xpath = "//div[@class='wow fadeIn searchbg animated']")
-	WebElement		airClick;
+	WebElement			airClick;
 
 	@FindBy(css = ".btn-warning.btn.btn-lg.btn-block")
-	WebElement		performHotelSearch;
+	WebElement			performHotelSearch;
 
 	public HotelsTab(WebDriver webDriver) {
 
@@ -73,7 +69,7 @@ public class HotelsTab {
 		PageFactory.initElements(webDriver, this);
 
 	}
-	
+
 	public void gotoHome() {
 		GenericMethods.selectByLinkText(driver, "Home");
 		log.info("Clicked Home");
@@ -129,7 +125,6 @@ public class HotelsTab {
 		log.info("clickChildAgePopUp clicked");
 
 	}
-
 
 	public void selectSkipStartMonth() {
 		skipStartMonth.click();

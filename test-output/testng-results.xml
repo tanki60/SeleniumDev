@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[ISuite onStart==>  Suite Name: Regression Suite ==> Suite START TIME: 1497711440]]>
+      <![CDATA[About to begin executing Suite Regression Suite]]>
     </line>
     <line>
-      <![CDATA[ITestContext onStart==> About to begin executing Test SomeTest]]>
+      <![CDATA[About to begin executing Test HomePage all Tabs]]>
     </line>
     <line>
       <![CDATA[About to begin executing following method : BaseSuite.beforeClass]]>
@@ -14,76 +14,28 @@
       <![CDATA[Completed executing following method : BaseSuite.beforeClass]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.logStartTimeForEachTest]]>
+      <![CDATA[About to begin executing following method : CaseThreeTest.featuredHotel]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+      <![CDATA[Completed executing following method : CaseThreeTest.featuredHotel]]>
     </line>
     <line>
-      <![CDATA[ITestResult onTestStart==>  Test Name: register START TIME: 1497711509]]>
+      <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.register]]>
+      <![CDATA[Test Status: Pass]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : CaseOneTest.register]]>
+      <![CDATA[About to begin executing following method : CaseThreeTest.continueAsGuest]]>
     </line>
     <line>
-      <![CDATA[ITestResult onTestSuccess==>  Test Name: register END TIME: 1497711526]]>
+      <![CDATA[Completed executing following method : CaseThreeTest.continueAsGuest]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+      <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.logStartTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[ITestResult onTestStart==>  Test Name: updateProfile START TIME: 1497711526]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.updateProfile]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseOneTest.updateProfile]]>
-    </line>
-    <line>
-      <![CDATA[ITestResult onTestSuccess==>  Test Name: updateProfile END TIME: 1497711542]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.logStartTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[ITestResult onTestStart==>  Test Name: signOut START TIME: 1497711542]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.signOut]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseOneTest.signOut]]>
-    </line>
-    <line>
-      <![CDATA[ITestResult onTestSuccess==>  Test Name: signOut END TIME: 1497711550]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
+      <![CDATA[Test Status: Failed]]>
     </line>
     <line>
       <![CDATA[About to begin executing following method : BaseSuite.afterClass]]>
@@ -92,12 +44,12 @@
       <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
     </line>
   </reporter-output>
-  <suite name="Regression Suite" duration-ms="119928" started-at="2017-06-17T14:57:20Z" finished-at="2017-06-17T14:59:20Z">
+  <suite name="Regression Suite" duration-ms="75469" started-at="2017-06-20T16:02:12Z" finished-at="2017-06-20T16:03:28Z">
     <groups>
     </groups>
-    <test name="SomeTest" duration-ms="119928" started-at="2017-06-17T14:57:20Z" finished-at="2017-06-17T14:59:20Z">
-      <class name="com.automation.CaseOneTest">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="beforeClass" is-config="true" duration-ms="68488" started-at="2017-06-17T10:57:20Z" finished-at="2017-06-17T10:58:29Z">
+    <test name="HomePage all Tabs" duration-ms="75469" started-at="2017-06-20T16:02:12Z" finished-at="2017-06-20T16:03:28Z">
+      <class name="com.automation.CaseThreeTest">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="beforeClass" is-config="true" duration-ms="23015" started-at="2017-06-20T12:02:12Z" finished-at="2017-06-20T12:02:35Z">
           <params>
             <param index="0">
               <value>
@@ -111,95 +63,112 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="logStartTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="logStartTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-17T10:58:29Z" finished-at="2017-06-17T10:58:29Z">
+        <test-method status="PASS" signature="featuredHotel()[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="featuredHotel" duration-ms="15308" started-at="2017-06-20T12:02:35Z" finished-at="2017-06-20T12:02:51Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
+              <![CDATA[Completed executing following method : CaseThreeTest.featuredHotel]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
             </line>
           </reporter-output>
-        </test-method> <!-- logStartTimeForEachTest -->
-        <test-method status="PASS" signature="register()[pri:1, instance:com.automation.CaseOneTest@3f4ddd67]" name="register" duration-ms="16938" started-at="2017-06-17T10:58:29Z" finished-at="2017-06-17T10:58:46Z">
+        </test-method> <!-- featuredHotel -->
+        <test-method status="FAIL" signature="continueAsGuest()[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="continueAsGuest" duration-ms="33454" started-at="2017-06-20T12:02:51Z" depends-on-methods="com.automation.CaseThreeTest.featuredHotel" finished-at="2017-06-20T12:03:24Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//div[@id='select2-drop']/div/input"}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Eclipse', ip: '192.168.0.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0'
+*** Element info: {Using=xpath, value=//div[@id='select2-drop']/div/input}
+Session ID: 7b5972c8-0762-4512-9dd4-9aa98085402d
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@id='select2-drop']/div/input"}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Eclipse', ip: '192.168.0.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0'
+*** Element info: {Using=xpath, value=//div[@id='select2-drop']/div/input}
+Session ID: 7b5972c8-0762-4512-9dd4-9aa98085402d
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at $Proxy10.sendKeys(Unknown Source)
+	at com.automation.dto.BookAsGuest.clikAndSelectCountry(BookAsGuest.java:114)
+	at com.automation.CaseThreeTest.continueAsGuest(CaseThreeTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@id='select2-drop']/div/input"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Eclipse', ip: '192.168.0.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Tanky/AppData/Local/Temp/anonymous3745913705627602285webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Tanky/AppData/Local/Temp/anonymous3745913705627602285webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : CaseOneTest.register]]>
+              <![CDATA[Completed executing following method : CaseThreeTest.continueAsGuest]]>
             </line>
             <line>
-              <![CDATA[ITestResult onTestSuccess==>  Test Name: register END TIME: 1497711526]]>
+              <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
             </line>
             <line>
-              <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
+              <![CDATA[Test Status: Failed]]>
             </line>
           </reporter-output>
-        </test-method> <!-- register -->
-        <test-method status="PASS" signature="logEndTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="logEndTimeForEachTest" is-config="true" duration-ms="0" started-at="2017-06-17T10:58:46Z" finished-at="2017-06-17T10:58:46Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logEndTimeForEachTest -->
-        <test-method status="PASS" signature="logStartTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="logStartTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-17T10:58:46Z" finished-at="2017-06-17T10:58:46Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logStartTimeForEachTest -->
-        <test-method status="PASS" signature="updateProfile()[pri:2, instance:com.automation.CaseOneTest@3f4ddd67]" name="updateProfile" duration-ms="15938" started-at="2017-06-17T10:58:46Z" finished-at="2017-06-17T10:59:02Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.updateProfile]]>
-            </line>
-            <line>
-              <![CDATA[ITestResult onTestSuccess==>  Test Name: updateProfile END TIME: 1497711542]]>
-            </line>
-            <line>
-              <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- updateProfile -->
-        <test-method status="PASS" signature="logEndTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="logEndTimeForEachTest" is-config="true" duration-ms="0" started-at="2017-06-17T10:59:02Z" finished-at="2017-06-17T10:59:02Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logEndTimeForEachTest -->
-        <test-method status="PASS" signature="logStartTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="logStartTimeForEachTest" is-config="true" duration-ms="2" started-at="2017-06-17T10:59:02Z" finished-at="2017-06-17T10:59:02Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.logStartTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logStartTimeForEachTest -->
-        <test-method status="PASS" signature="signOut()[pri:3, instance:com.automation.CaseOneTest@3f4ddd67]" name="signOut" duration-ms="7767" started-at="2017-06-17T10:59:02Z" finished-at="2017-06-17T10:59:10Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.signOut]]>
-            </line>
-            <line>
-              <![CDATA[ITestResult onTestSuccess==>  Test Name: signOut END TIME: 1497711550]]>
-            </line>
-            <line>
-              <![CDATA[About to begin executing following method : CaseOneTest.logEndTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- signOut -->
-        <test-method status="PASS" signature="logEndTimeForEachTest()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="logEndTimeForEachTest" is-config="true" duration-ms="1" started-at="2017-06-17T10:59:10Z" finished-at="2017-06-17T10:59:10Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseOneTest.logEndTimeForEachTest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logEndTimeForEachTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.CaseOneTest@3f4ddd67]" name="afterClass" is-config="true" duration-ms="10531" started-at="2017-06-17T10:59:10Z" finished-at="2017-06-17T10:59:20Z">
+        </test-method> <!-- continueAsGuest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="afterClass" is-config="true" duration-ms="3635" started-at="2017-06-20T12:03:24Z" finished-at="2017-06-20T12:03:28Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automation.CaseOneTest -->
-    </test> <!-- SomeTest -->
+      </class> <!-- com.automation.CaseThreeTest -->
+    </test> <!-- HomePage all Tabs -->
   </suite> <!-- Regression Suite -->
 </testng-results>

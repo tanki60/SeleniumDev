@@ -1,7 +1,5 @@
 package com.automation.dto;
 
-
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,20 +10,18 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.automation.util.GenericMethods;
 
-
-
 public class ToursTab {
 
 	static Logger		log	= Logger.getLogger(ToursTab.class);
 
-	WebDriver			driver;
+	private WebDriver	driver;
 
 	@FindBy(xpath = "//div[@class='container']/ul/li[@data-title='TOURS']")
 	private WebElement	toursTab;
 
 	@FindBy(css = "#TOURS > div > form > div.go-text-right > div.form-group.go-right.xl > div.row > div:nth-of-type(2) > a > span:nth-of-type(1)")
 	private WebElement	toursTxtBox;
-	
+
 	@FindBy(css = "body > div:nth-of-type(20) > div > input")
 	private WebElement	toursTxtTypeAhead;
 
@@ -47,16 +43,12 @@ public class ToursTab {
 	@FindBy(xpath = "//div[@id='TOURS']/div/form/div[5]/div/button")
 	private WebElement	performSearch;
 
-	@SuppressWarnings("unused")
-	@FindBy(xpath = "//div[@class='searchground']")
-	private WebElement	airClick;
-
 	public ToursTab(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
-	
+
 	public void gotoHome() {
 		GenericMethods.selectByLinkText(driver, "Home");
 		log.info("Clicked Home");
@@ -65,7 +57,7 @@ public class ToursTab {
 
 	public void selectToursTab() {
 		GenericMethods.checkVisibilityofElementAndClick(driver, toursTab);
-		//toursTab.click();
+		// toursTab.click();
 		log.info("Finished method selectFlightsTab() ");
 
 	}

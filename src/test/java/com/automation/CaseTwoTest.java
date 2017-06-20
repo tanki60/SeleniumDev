@@ -1,13 +1,11 @@
 package com.automation;
 
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.HotelResults;
 import com.automation.dto.HotelsTab;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 
 import com.automation.util.GenericMethods;
 import com.relevantcodes.extentreports.LogStatus;

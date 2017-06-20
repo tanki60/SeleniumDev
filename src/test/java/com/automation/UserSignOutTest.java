@@ -1,6 +1,5 @@
 package com.automation;
 
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.UserSignOut;
 

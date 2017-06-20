@@ -28,31 +28,31 @@ public class BaseSuite {
 	protected ExtentTest	extentLogger;
 
 	@BeforeClass
-	@Parameters({"browser"})
+	@Parameters({ "browser" })
 	public void beforeClass(String browser) {
-		
-		//get the substring of class name to be used for name of custom reports generated.
+
+		// get the substring of class name to be used for name of custom reports
+		// generated.
 		String partOfReportName = GenericMethods.splitStringByChar(this.getClass().getName(), ".", 2);
-		
+
 		reports = new ExtentReports(SiteConstants.EXTENT_REPORTS_LOCATION + SiteConstants.EXTENT_REPORTS_PREFIX
 				+ partOfReportName + SiteConstants.EXTENT_REPORTS_EXT);
 		reports.loadConfig(new File(SiteConstants.EXTENT_CONFIG_LOCATION));
-		
+
 		extentLogger = reports.startTest("Verify " + partOfReportName);
 		extentLogger.setDescription(partOfReportName);
-		
-		
+
 		PropertyConfigurator.configure(SiteConstants.LOG4J_FILE_LOCATION);
-		
-		if(browser.equals("Firefox")){
+
+		if (browser.equals("Firefox")) {
 			driver = new FirefoxDriver();
-		}else if(browser.equals("Chrome")){
-			
+		} else if (browser.equals("Chrome")) {
+
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			driver = new ChromeDriver();
 		}
-		
-		extentLogger.log(LogStatus.INFO, browser +" browser started....");
+
+		extentLogger.log(LogStatus.INFO, browser + " browser started....");
 		baseUrl = SiteConstants.SITE_BASE_URL;
 		driver.manage().window().maximize();
 		extentLogger.log(LogStatus.INFO, "Browser maximised");

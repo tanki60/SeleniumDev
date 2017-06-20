@@ -1,6 +1,5 @@
 package com.automation.dto;
 
-
 import com.automation.constants.SiteConstants;
 
 import org.apache.log4j.Logger;
@@ -11,36 +10,35 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.util.GenericMethods;
 
-
 public class RegisterNewUser {
 
-	static Logger	log	= Logger.getLogger(RegisterNewUser.class);
+	static Logger		log	= Logger.getLogger(RegisterNewUser.class);
 
-	WebDriver		driver;
+	private WebDriver	driver;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/a")
-	WebElement		signUpOption;
+	WebElement			signUpOption;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/ul/li[2]")
-	WebElement		clickSignUpOption;
+	WebElement			clickSignUpOption;
 
 	@FindBy(xpath = "//form[@id='headersignupform']//div/input[@name='firstname']")
-	WebElement		firstName;
+	WebElement			firstName;
 
 	@FindBy(xpath = "//form[@id='headersignupform']//div/input[@name='lastname']")
-	WebElement		lastName;
+	WebElement			lastName;
 
 	@FindBy(xpath = "//form[@id='headersignupform']//div/input[@name='email']")
-	WebElement		email;
+	WebElement			email;
 
 	@FindBy(xpath = "//form[@id='headersignupform']//div/input[@name='password']")
-	WebElement		password;
+	WebElement			password;
 
 	@FindBy(xpath = "//form[@id='headersignupform']//div/input[@name='confirmpassword']")
-	WebElement		confirmPassword;
+	WebElement			confirmPassword;
 
 	@FindBy(xpath = "//form[@id='headersignupform']//div/button")
-	WebElement		submitButton;
+	WebElement			submitButton;
 
 	public RegisterNewUser(WebDriver driver) {
 
@@ -54,7 +52,7 @@ public class RegisterNewUser {
 		String path1 = "//div[@class='navbar-collapse collapse']/ul/li[2]/a";
 		String path2 = "//div[@class='navbar-collapse collapse']/ul/li[2]/ul/li";
 
-		GenericMethods.javaScriptClickByXPath(driver, path1);
+		GenericMethods.javaScriptClickByPath(driver, path1, true);
 		GenericMethods.selectListOptionsByIndex(driver, path2, 1);
 
 		log.info("Clicked on Sign Up option for new user");

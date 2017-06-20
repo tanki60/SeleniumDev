@@ -1,6 +1,5 @@
 package com.automation;
 
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.FlightsTab;
 
@@ -10,10 +9,8 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class FlightsTabTest extends BaseSuite {
 
-	FlightsTab flightsTab;
-	
-	
-	
+	FlightsTab	flightsTab;
+
 	@Test(priority = 0)
 	public void selectFlights() {
 
@@ -35,8 +32,8 @@ public class FlightsTabTest extends BaseSuite {
 		extentLogger.log(LogStatus.INFO, "Selected number of passengers ");
 		extentLogger.log(LogStatus.PASS, "Verified Flights Tab....");
 	}
-	
-	@Test(priority = 1, enabled=false, dependsOnMethods={"selectFlights"})
+
+	@Test(priority = 1, enabled = false, dependsOnMethods = { "selectFlights" })
 	public void searchFlights() {
 
 		flightsTab.searchFlights();

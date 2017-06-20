@@ -1,6 +1,5 @@
 package com.automation;
 
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.UpdateNewUserProfile;
 
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
-public class UpdateNewUserProfileTest extends BaseSuite{
+public class UpdateNewUserProfileTest extends BaseSuite {
 
 	UpdateNewUserProfile	updateProfile;
 
@@ -17,7 +16,7 @@ public class UpdateNewUserProfileTest extends BaseSuite{
 	public void updateNewUserProfileAndSave() {
 
 		updateProfile = new UpdateNewUserProfile(driver);
-		
+
 		updateProfile.setSelectAccountUpdate();
 		extentLogger.log(LogStatus.INFO, "Selected Account option");
 		updateProfile.setClickMyProfile();

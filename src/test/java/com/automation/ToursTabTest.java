@@ -1,6 +1,5 @@
 package com.automation;
 
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.ToursTab;
 
@@ -8,11 +7,10 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
-
 public class ToursTabTest extends BaseSuite {
 
 	ToursTab	toursTab;
-	
+
 	@Test()
 	public void silectTours() {
 
@@ -35,7 +33,7 @@ public class ToursTabTest extends BaseSuite {
 
 	}
 
-	@Test(priority = 2, enabled=false)
+	@Test(priority = 2, enabled = false)
 	public void searchTours() {
 
 		toursTab.performPackageSearch();

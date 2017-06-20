@@ -1,0 +1,16 @@
+<!-- DOCTYPE line provides intelliSense through testng dtd -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+	<parameter name="browser" value="Firefox" />
+	<listeners>
+		<listener class-name="com.automation.listeners.CommonListener"></listener>
+	</listeners>
+	<test name="HomePage Hotels Tab">
+		<classes>
+			<class name="com.automation.HotelsTabTest" />
+			<class name="com.automation.ToursTabTest" />
+			<class name="com.automation.CarsTabTest" />
+			<class name="com.automation.FlightsTabTest" />
+		</classes>
+	</test>
+</suite>

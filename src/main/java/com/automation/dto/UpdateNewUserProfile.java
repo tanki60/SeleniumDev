@@ -1,6 +1,5 @@
 package com.automation.dto;
 
-
 import com.automation.constants.SiteConstants;
 
 import org.apache.log4j.Logger;
@@ -11,44 +10,44 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.util.GenericMethods;
 
-
 public class UpdateNewUserProfile {
 
-	static Logger	log	= Logger.getLogger(UpdateNewUserProfile.class);
-	WebDriver		driver;
+	static Logger		log	= Logger.getLogger(UpdateNewUserProfile.class);
+
+	private WebDriver	driver;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/a")
-	WebElement		signUpOption;
+	WebElement			signUpOption;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/ul/li[1]/a")
-	WebElement		selectAccountUpdate;
+	WebElement			selectAccountUpdate;
 
 	@FindBy(xpath = "//div[@class='col-md-1 offset-0']/ul/li/a[@href='#profile']")
-	WebElement		clickMyProfile;
+	WebElement			clickMyProfile;
 
 	@FindBy(xpath = "//input[@class='form-control' and @name='address1']")
-	WebElement		addressOne;
+	WebElement			addressOne;
 
 	@FindBy(xpath = "//input[@class='form-control' and @name='address2']")
-	WebElement		addressTwo;
+	WebElement			addressTwo;
 
 	@FindBy(xpath = "//input[@class='form-control' and @name='city']")
-	WebElement		city;
+	WebElement			city;
 
 	@FindBy(xpath = "//input[@class='form-control' and @name='state']")
-	WebElement		state;
+	WebElement			state;
 
 	@FindBy(xpath = "//input[@class='form-control' and @name='zip']")
-	WebElement		zip;
+	WebElement			zip;
 
 	@FindBy(xpath = "//select[@class='form-control' and @name ='country']")
-	WebElement		countryDropDwn;
+	WebElement			countryDropDwn;
 
 	@FindBy(xpath = "//button[@class='btn btn-action btn-block updateprofile']")
-	WebElement		submitInfo;
+	WebElement			submitInfo;
 
 	@FindBy(xpath = "//div[@class='accountresult']/div")
-	WebElement		successMsg;
+	WebElement			successMsg;
 
 	public UpdateNewUserProfile(WebDriver driver) {
 		this.driver = driver;
@@ -57,7 +56,7 @@ public class UpdateNewUserProfile {
 	}
 
 	public void setSelectAccountUpdate() {
-		GenericMethods.javaScriptClickByXPath(driver, "//div[@class='navbar-collapse collapse']/ul/li[2]/a");
+		GenericMethods.javaScriptClickByPath(driver, "//div[@class='navbar-collapse collapse']/ul/li[2]/a", true);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -71,8 +70,9 @@ public class UpdateNewUserProfile {
 	}
 
 	public void setClickMyProfile() {
-		//GenericMethods.selectListOptionsByTagValue(driver, "//div[@class='col-md-1 offset-0']/ul/li/a", "#profile",
-			//	"href");
+		// GenericMethods.selectListOptionsByTagValue(driver,
+		// "//div[@class='col-md-1 offset-0']/ul/li/a", "#profile",
+		// "href");
 		clickMyProfile.click();
 		log.info("Clicked My Profile");
 	}

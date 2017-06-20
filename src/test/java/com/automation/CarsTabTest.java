@@ -1,18 +1,16 @@
 package com.automation;
 
-
-
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.CarsTab;
 
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
+
 /**
  * 
  * @author Tanky
- *
+ * 
  */
 
 public class CarsTabTest extends BaseSuite {
@@ -45,8 +43,8 @@ public class CarsTabTest extends BaseSuite {
 		extentLogger.log(LogStatus.PASS, "Verified Tab....");
 
 	}
-	
-	@Test(enabled=false, dependsOnMethods={"selectCar"})
+
+	@Test(enabled = false, dependsOnMethods = { "selectCar" })
 	public void SearchCar() {
 
 		carsTab.searchCarResults();

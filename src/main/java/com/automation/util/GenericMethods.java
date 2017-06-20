@@ -17,6 +17,7 @@ import java.util.Random;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -36,20 +37,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class GenericMethods {
 
-	static Logger log = Logger.getLogger(GenericMethods.class);
+	static Logger	log	= Logger.getLogger(GenericMethods.class);
 
-	public static void javaScriptClickByElement(WebDriver driver,
-			WebElement element) {
+	public synchronized static void javaScriptClickByElement(WebDriver driver, WebElement element) {
 		try {
 
-			((JavascriptExecutor) driver).executeScript(
-					"arguments[0].click();", element);
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 			log.debug("Clicked on element with using java script click");
 
 		} catch (StaleElementReferenceException e) {
-			log.debug("Element is not attached to the page document "
-					+ e.getStackTrace());
+			log.debug("Element is not attached to the page document " + e.getStackTrace());
 		} catch (NoSuchElementException e) {
 			log.debug("Element was not found in DOM " + e.getStackTrace());
 		} catch (Exception e) {
@@ -57,30 +55,27 @@ public class GenericMethods {
 		}
 	}
 
-	public static void javaScriptClickByElementLocation(WebDriver driver,
-			WebElement element, String axis) {
+	/*
+	 * 
+	 * Scroll down to the element x/y axis and click on that element
+	 */
+	public synchronized static void javaScriptClickByElementLocation(WebDriver driver, WebElement element, String axis) {
 		try {
 
 			if (axis.equals("x")) {
-				((JavascriptExecutor) driver)
-						.executeScript("window.scrollTo(0,"
-								+ element.getLocation().x + ")");
+				((JavascriptExecutor) driver).executeScript("window.scrollTo(0," + element.getLocation().x + ")");
 			}
 
 			else {
-				((JavascriptExecutor) driver)
-						.executeScript("window.scrollTo(0,"
-								+ element.getLocation().y + ")");
+				((JavascriptExecutor) driver).executeScript("window.scrollTo(0," + element.getLocation().y + ")");
 			}
 
-			((JavascriptExecutor) driver).executeScript(
-					"arguments[0].click();", element);
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
 			log.info("Scrolled to location:" + element.getLocation());
 
 		} catch (StaleElementReferenceException e) {
-			log.info("Element is not attached to the page document "
-					+ e.getStackTrace());
+			log.info("Element is not attached to the page document " + e.getStackTrace());
 		} catch (NoSuchElementException e) {
 			log.info("Element was not found in DOM " + e.getStackTrace());
 		} catch (Exception e) {
@@ -88,17 +83,39 @@ public class GenericMethods {
 		}
 	}
 
-	public static void javaScriptClickByXPath(WebDriver driver, String xPath) {
+	public synchronized static void javaScriptPopUpClick(WebDriver driver) {
+
+		try {
+			// Wait 10 seconds till alert is present
+			WebDriverWait wait = new WebDriverWait(driver, 3);
+			Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+			// Accepting alert.
+			alert.accept();
+			System.out.println("Accepted the alert successfully.");
+		} catch (Throwable e) {
+			System.err.println("Error came while waiting for the alert popup. " + e.getMessage());
+		}
+	}
+
+	public synchronized static void javaScriptClickByPath(WebDriver driver, String path, boolean isXpath) {
 		try {
 
-			WebElement element = driver.findElement(By.xpath(xPath));
+			WebElement element;
+
+			if (isXpath == true) {
+				element = driver.findElement(By.xpath(path));
+			} else {
+
+				element = driver.findElement(By.cssSelector(path));
+			}
+
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].click();", element);
 
 			log.info("Clicked on xPath with using java script click");
 		} catch (StaleElementReferenceException e) {
-			log.debug("Element is not attached to the page document "
-					+ e.getStackTrace());
+			log.debug("Element is not attached to the page document " + e.getStackTrace());
 		} catch (NoSuchElementException e) {
 			log.debug("Element was not found in DOM " + e.getStackTrace());
 		} catch (Exception e) {
@@ -106,21 +123,17 @@ public class GenericMethods {
 		}
 	}
 
-	public static void checkVisibilityofElementAndClick(WebDriver driver,
-			WebElement element) {
+	public synchronized static void checkVisibilityofElementAndClick(WebDriver driver, WebElement element) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement waitElement = wait.until(ExpectedConditions
-				.visibilityOf(element));
+		WebElement waitElement = wait.until(ExpectedConditions.visibilityOf(element));
 		waitElement.click();
 	}
 
-	public static void checkVisibilityofElementLocatedAndClick(
-			WebDriver driver, String xpath) {
+	public synchronized static void checkVisibilityofElementLocatedAndClick(WebDriver driver, String xpath) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		WebElement waitElement = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath(xpath)));
+		WebElement waitElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 		waitElement.click();
 	}
 
@@ -133,8 +146,7 @@ public class GenericMethods {
 	 * 
 	 * @isNewTab = if option is new URL, then could open in new windows tab
 	 */
-	public static void selectListOptionsByIndex(WebDriver driver, String xpath,
-			int optionAtIndex) {
+	public synchronized static void selectListOptionsByIndex(WebDriver driver, String xpath, int optionAtIndex) {
 
 		List<WebElement> listOptions = driver.findElements(By.xpath(xpath));
 		WebElement option = listOptions.get(optionAtIndex);
@@ -146,8 +158,7 @@ public class GenericMethods {
 	 * to a new handle. It will close the desired handle and focus on the needed
 	 * one
 	 */
-	public static void windowsHandleHelper(WebDriver driver, String mainHandle,
-			String purpose) {
+	public synchronized static void windowsHandleHelper(WebDriver driver, String mainHandle, String purpose) {
 
 		log.info("Main Handle Is: " + mainHandle);
 		Set<String> allWindowHandles = driver.getWindowHandles();
@@ -177,26 +188,24 @@ public class GenericMethods {
 						log.info("Closing Handle before Switching: " + handle);
 					}
 				} else {
-					log.info("ERROR: There must be atlest 2 window handles: handleSize = "
-							+ handleSize);
+					log.info("ERROR: There must be atlest 2 window handles: handleSize = " + handleSize);
 				}
 
 			}
 
 		} else {
-			log.info("ERROR: There must be atlest 2 window handles: handleSize = "
-					+ handleSize);
+			log.info("ERROR: There must be atlest 2 window handles: handleSize = " + handleSize);
 		}
 
 	}
 
-	public static boolean checkIfDisplayed(WebElement element) {
+	public synchronized static boolean checkIfDisplayed(WebElement element) {
 
 		boolean isDisplayed = element.isDisplayed();
 		return isDisplayed;
 	}
 
-	public static boolean checkIfEnabled(WebElement element) {
+	public synchronized static boolean checkIfEnabled(WebElement element) {
 
 		boolean isEnabled = element.isEnabled();
 		return isEnabled;
@@ -207,7 +216,7 @@ public class GenericMethods {
 	 * boolean if True, it will return +1 day to be used as futureDate (eg:
 	 * carDropOff date)
 	 */
-	public static String getCurrentDate(boolean future) {
+	public synchronized static String getCurrentDate(boolean future) {
 
 		Calendar c = Calendar.getInstance();
 		Date date = Calendar.getInstance().getTime();
@@ -229,10 +238,9 @@ public class GenericMethods {
 	/*
 	 * Returns a list of all links in a given page.
 	 */
-	public static List<WebElement> getClickableLinks(WebDriver driver) {
+	public synchronized static List<WebElement> getClickableLinks(WebDriver driver) {
 		List<WebElement> pageClickableLinks = new ArrayList<WebElement>();
-		List<WebElement> pageLinks = new ArrayList<WebElement>(
-				driver.findElements(By.tagName("a")));
+		List<WebElement> pageLinks = new ArrayList<WebElement>(driver.findElements(By.tagName("a")));
 		pageLinks.addAll(driver.findElements(By.tagName("img")));
 
 		for (WebElement aLink : pageLinks) {
@@ -248,7 +256,7 @@ public class GenericMethods {
 	/*
 	 * This method checks the status of a given link
 	 */
-	public static String getLinkStatus(URL url) {
+	public synchronized static String getLinkStatus(URL url) {
 		String linkResponse = "";
 
 		HttpURLConnection http;
@@ -263,7 +271,7 @@ public class GenericMethods {
 		return linkResponse;
 	}
 
-	public static void testPageLinks(WebDriver driver) {
+	public synchronized static void testPageLinks(WebDriver driver) {
 		List<WebElement> listOfClickableLinks = getClickableLinks(driver);
 
 		for (WebElement alink : listOfClickableLinks) {
@@ -281,8 +289,7 @@ public class GenericMethods {
 	/*
 	 * This method will return the desired substring of class name
 	 */
-	public static String splitStringByChar(String originalStr,
-			String tokennizer, int tokenAt) {
+	public synchronized static String splitStringByChar(String originalStr, String tokennizer, int tokenAt) {
 
 		String[] parts = originalStr.split("\\" + tokennizer);
 		System.out.println(parts);
@@ -291,7 +298,7 @@ public class GenericMethods {
 
 	}
 
-	public static String getElementText(WebDriver driver, String xpath) {
+	public synchronized static String getElementText(WebDriver driver, String xpath) {
 
 		WebElement element = driver.findElement(By.xpath(xpath));
 		String text = element.getText();
@@ -302,7 +309,7 @@ public class GenericMethods {
 	/*
 	 * Generates fake email of size 10 chars
 	 */
-	public static String generateFakeEmail() {
+	public synchronized static String generateFakeEmail() {
 
 		int leftLimit = 97; // letter 'a'
 		int rightLimit = 122; // letter 'z'
@@ -310,8 +317,7 @@ public class GenericMethods {
 		Random random = new Random();
 		StringBuilder buffer = new StringBuilder(targetStringLength);
 		for (int i = 0; i < targetStringLength; i++) {
-			int randomLimitedInt = leftLimit
-					+ (int) (random.nextFloat() * (rightLimit - leftLimit + 1));
+			int randomLimitedInt = leftLimit + (int) (random.nextFloat() * (rightLimit - leftLimit + 1));
 			buffer.append((char) randomLimitedInt);
 		}
 		String generatedString = buffer.toString().concat("@fake.co");
@@ -319,21 +325,19 @@ public class GenericMethods {
 		return generatedString;
 	}
 
-	public static void selectByValueFromDropDown(WebDriver driver,
-			WebElement element, String value) {
+	public synchronized static void selectByValueFromDropDown(WebDriver driver, WebElement element, String value) {
 
 		Select select = new Select(element);
 		select.selectByValue(value);
 	}
 
-	public static void selectByLinkText(WebDriver driver, String value) {
+	public synchronized static void selectByLinkText(WebDriver driver, String value) {
 
 		driver.findElement(By.linkText(value)).click();
 
 	}
 
-	public static void selectListOptionsByStringValue(WebDriver driver,
-			String xpath, String find) {
+	public synchronized static void selectListOptionsByStringValue(WebDriver driver, String xpath, String find) {
 
 		List<WebElement> listOptions = driver.findElements(By.xpath(xpath));
 
@@ -342,8 +346,7 @@ public class GenericMethods {
 		while (accountIter.hasNext()) {
 
 			WebElement element = accountIter.next();
-			System.out.println("ALL:" + element.getText() + "     "
-					+ element.getText().length());
+			System.out.println("ALL:" + element.getText() + "     " + element.getText().length());
 			if (element.getText().equals(find)) {
 				element.click();
 			} else {

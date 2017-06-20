@@ -1,6 +1,5 @@
 package com.automation;
 
-
 import java.util.Date;
 
 import com.automation.base.BaseSuite;
@@ -24,17 +23,15 @@ public class CaseOneTest extends BaseSuite {
 	UserSignOut				userEndSession;
 	RegisterNewUser			newUser;
 	SoftAssert				softAssert	= null;
-	Date date;
-	
+	Date					date;
+
 	@BeforeMethod
-	public void logStartTimeForEachTest()
-	{
+	public void logStartTimeForEachTest() {
 		// add time for performance
 	}
-	
-	@Test(priority=1)
-	public void register()
-	{
+
+	@Test(priority = 1)
+	public void register() {
 		newUser = new RegisterNewUser(driver);
 
 		newUser.selectRegisterOption();
@@ -52,13 +49,11 @@ public class CaseOneTest extends BaseSuite {
 		newUser.submitInfo();
 		extentLogger.log(LogStatus.INFO, "Submit the form");
 
-		Assert.assertTrue(newUser.confirmLogInName(),"Successfully created profile...");
+		Assert.assertTrue(newUser.confirmLogInName(), "Successfully created profile...");
 		extentLogger.log(LogStatus.PASS, "Successfully created profile...");
 	}
 
-	
-
-	@Test(priority=2)
+	@Test(priority = 2)
 	public void updateProfile() {
 
 		updateProfile = new UpdateNewUserProfile(driver);
@@ -86,7 +81,7 @@ public class CaseOneTest extends BaseSuite {
 
 	}
 
-	@Test(priority=3)
+	@Test(priority = 3)
 	public void signOut() {
 
 		userEndSession = new UserSignOut(driver);
@@ -99,10 +94,9 @@ public class CaseOneTest extends BaseSuite {
 		extentLogger.log(LogStatus.PASS, "Confirmed Signed Out...");
 
 	}
-	
+
 	@AfterMethod
-	public void logEndTimeForEachTest()
-	{
+	public void logEndTimeForEachTest() {
 		// add time for performance
 	}
 }

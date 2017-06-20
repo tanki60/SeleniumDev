@@ -23,11 +23,13 @@ public class SiteConstants {
 	public static final String SWITCH_TO_NEW_HANDLE="SwitchToNewHandle";
 	
 	
-	//RegisterNewUser Page
+	//RegisterNewUser Page or Guest User
 	public static final String REGISTER_USER_FIRSTNAME="Tanky";
 	public static final String REGISTER_USER_LASTNAME="Khanal";
 	public static final String REGISTER_USER_PASSWORD="qqqqqq";
 	public static final String REGISTER_USER_EMAIL="tk@gmail.com";
+	public static final String REGISTER_USER_PHONE="111-222-3333";
+	public static final String REGISTER_USER_ADDRESS="1 City Hall";
 	
 	//UpDate My Profile
 	public static final String UPDATE_USER_ADDRESS1="Some Address 1";
@@ -40,5 +42,12 @@ public class SiteConstants {
 	//SignIn/Out Page
 	public static final String USER_LOGOUT_TEXT="My Account";
 	public static final String USER_INVALID_ACCOUNT="Invalid Email or Password";
+	
+	//Featured Hotel
+	public static final String FEDTURED_USER_FIRSTNAME="Tanky";
+	public static final String FEDTURED_USER_PASSPORT="44444444";
+	public static final String FEDTURED_USER_AGE="20";
+	
+	
 
 }

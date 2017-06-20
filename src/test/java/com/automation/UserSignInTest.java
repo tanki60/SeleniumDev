@@ -1,6 +1,5 @@
 package com.automation;
 
-
 import com.automation.base.BaseSuite;
 import com.automation.dto.UpdateNewUserProfile;
 import com.automation.dto.UserSignIn;

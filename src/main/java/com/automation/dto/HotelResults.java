@@ -1,7 +1,5 @@
 package com.automation.dto;
 
-
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,11 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.util.GenericMethods;
 
-
 public class HotelResults {
 
-	WebDriver			driver;
-	
+	private WebDriver	driver;
+
 	static Logger		log	= Logger.getLogger(HotelResults.class);
 
 	@FindBy(css = ".form.input-lg.dpd1")
@@ -41,7 +38,7 @@ public class HotelResults {
 
 	@FindBy(css = "#searchform")
 	private WebElement	search;
-	
+
 	@FindBy(xpath = "//div[@class='itemscontainer']/h1")
 	private WebElement	results;
 
@@ -67,9 +64,9 @@ public class HotelResults {
 	}
 
 	public void clickStarGrade() {
-		
+
 		GenericMethods.javaScriptClickByElementLocation(driver, starGrade, "y");
-		//starGrade.click();
+		// starGrade.click();
 		log.info("Clicked clickStarGrade");
 	}
 
@@ -82,34 +79,34 @@ public class HotelResults {
 	}
 
 	public void clickPropertyType() {
-		
+
 		GenericMethods.javaScriptClickByElementLocation(driver, propertyType, "y");
-		//propertyType.click();
+		// propertyType.click();
 		log.info("Clicked clickPropertyType");
 	}
 
 	public void clickAmenities() {
 		GenericMethods.javaScriptClickByElementLocation(driver, amenities, "y");
-		//amenities.click();
+		// amenities.click();
 		log.info("Clicked clickAmenities");
 	}
 
 	public void clickSearch() {
-		
+
 		GenericMethods.javaScriptClickByElementLocation(driver, search, "y");
-		//search.click();
+		// search.click();
 		log.info("Clicked clickSearch");
 	}
-	
-	public boolean checkResults(){
-		
-		boolean isEmpty=false;
-		String txt=GenericMethods.getElementText(driver, "//div[@class='itemscontainer']/h1");
-		if(txt.equals("No Results!!")){
-			
-			isEmpty=true;
+
+	public boolean checkResults() {
+
+		boolean isEmpty = false;
+		String txt = GenericMethods.getElementText(driver, "//div[@class='itemscontainer']/h1");
+		if (txt.equals("No Results!!")) {
+
+			isEmpty = true;
 		}
-		
+
 		return isEmpty;
 	}
 

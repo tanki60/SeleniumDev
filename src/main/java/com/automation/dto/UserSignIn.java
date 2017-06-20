@@ -1,6 +1,5 @@
 package com.automation.dto;
 
-
 import com.automation.constants.SiteConstants;
 
 import org.apache.log4j.Logger;
@@ -11,27 +10,26 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.util.GenericMethods;
 
-
 public class UserSignIn {
 
-	static Logger	log	= Logger.getLogger(UserSignIn.class);
+	static Logger		log	= Logger.getLogger(UserSignIn.class);
 
-	WebDriver		driver;
+	private WebDriver	driver;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/a")
-	WebElement		myAccountDrpDwn;
+	WebElement			myAccountDrpDwn;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/ul/li[1]")
-	WebElement		signInOption;
+	WebElement			signInOption;
 
 	@FindBy(xpath = "//input[@name='username']")
-	WebElement		userEmail;
+	WebElement			userEmail;
 
 	@FindBy(xpath = "//input[@name='password']")
-	WebElement		passowrd;
+	WebElement			passowrd;
 
 	@FindBy(css = "button.btn.btn-action.btn-block.loginbtn")
-	WebElement		sigInBtn;
+	WebElement			sigInBtn;
 
 	public UserSignIn(WebDriver driver) {
 
@@ -47,7 +45,7 @@ public class UserSignIn {
 		myAccountDrpDwn.click();
 		log.info("Clicked on My Account drop down");
 	}
-	
+
 	public void clickSignInOption() {
 
 		signInOption.click();
@@ -70,16 +68,16 @@ public class UserSignIn {
 	}
 
 	public boolean confirmLogInName() {
-		
-		boolean isCorrectName=false;
+
+		boolean isCorrectName = false;
 		String text = GenericMethods.getElementText(driver,
 				"//div[@class='container']/div[@style='margin-bottom:25px;margin-right: 0px']/div/div/h3");
-		String username = "Hi, " + SiteConstants.REGISTER_USER_FIRSTNAME + " "+ SiteConstants.REGISTER_USER_LASTNAME;
-		if(text.equals(username)){
-			isCorrectName=true;
-			
+		String username = "Hi, " + SiteConstants.REGISTER_USER_FIRSTNAME + " " + SiteConstants.REGISTER_USER_LASTNAME;
+		if (text.equals(username)) {
+			isCorrectName = true;
+
 		}
-		System.out.println("**"+username+"**");
+		System.out.println("**" + username + "**");
 		return isCorrectName;
 	}
 
