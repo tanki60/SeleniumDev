@@ -39,7 +39,7 @@
 
 	<profiles>
 		<profile>
-			<id>RegressionQAEnv</id>
+			<id>QA</id>
 			<build>
 				<plugins>
 					<plugin>
