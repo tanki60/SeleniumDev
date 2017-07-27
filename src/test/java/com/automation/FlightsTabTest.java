@@ -1,39 +1,22 @@
 package com.automation;
 
-import com.automation.base.BaseSuite;
-import com.automation.dto.FlightsTab;
-
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+import com.automation.base.BaseSuite;
+import com.automation.dto.FlightsTab;
 
 public class FlightsTabTest extends BaseSuite {
 
 	FlightsTab	flightsTab;
 
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void selectFlights() {
 
-		flightsTab = new FlightsTab(driver);
-		flightsTab.gotoHome();
-		extentLogger.log(LogStatus.INFO, "Selected Home Page");
-		flightsTab.selectFlightsTab();
-		extentLogger.log(LogStatus.INFO, "Selected Flights Tab");
-		flightsTab.selectFlyingFrom();
-		extentLogger.log(LogStatus.INFO, "Selected departure ");
-		flightsTab.selectFlyingTo();
-		extentLogger.log(LogStatus.INFO, "Selected arrival ");
-		flightsTab.selectDepatureDate();
-		extentLogger.log(LogStatus.INFO, "Selected departure date ");
-		flightsTab.selectReturnDate();
-		extentLogger.log(LogStatus.INFO, "Selected return date ");
-		flightsTab.selectNumOfAdultDrpDwn();
-		flightsTab.setNumOfAdultOkBtn();
-		extentLogger.log(LogStatus.INFO, "Selected number of passengers ");
-		extentLogger.log(LogStatus.PASS, "Verified Flights Tab....");
+		flightsTab = new FlightsTab(driver,extentLogger);
+		flightsTab.selectFlight();
 	}
 
-	@Test(priority = 1, enabled = false, dependsOnMethods = { "selectFlights" })
+	@Test(priority = 2, enabled = false, dependsOnMethods = { "selectFlights" })
 	public void searchFlights() {
 
 		flightsTab.searchFlights();

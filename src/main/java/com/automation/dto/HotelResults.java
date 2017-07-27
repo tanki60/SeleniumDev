@@ -6,12 +6,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class HotelResults {
 
 	private WebDriver	driver;
+	private ExtentTest	extentLogger;
 
 	static Logger		log	= Logger.getLogger(HotelResults.class);
 
@@ -42,9 +46,10 @@ public class HotelResults {
 	@FindBy(xpath = "//div[@class='itemscontainer']/h1")
 	private WebElement	results;
 
-	public HotelResults(WebDriver driver) {
+	public HotelResults(WebDriver driver, ExtentTest extentLogger) {
 
 		this.driver = driver;
+		this.extentLogger = extentLogger;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -108,6 +113,26 @@ public class HotelResults {
 		}
 
 		return isEmpty;
+	}
+
+	public void modifySearchCriteria() {
+
+		clickCheckInDate();
+		clickFlipMonthIcon();
+		clickPickDay();
+		extentLogger.log(LogStatus.INFO, "Updated check-in date");
+		clickStarGrade();
+		extentLogger.log(LogStatus.INFO, "Updated Star Garde");
+		selectPriceRange();
+		extentLogger.log(LogStatus.INFO, "Updated price range");
+		clickPropertyType();
+		extentLogger.log(LogStatus.INFO, "Updated property type");
+		clickAmenities();
+		extentLogger.log(LogStatus.INFO, "Updated amenities");
+		clickSearch();
+		extentLogger.log(LogStatus.INFO, "re-searched");
+		Assert.assertTrue(checkResults());
+		extentLogger.log(LogStatus.PASS, "Verified Results...");
 	}
 
 }

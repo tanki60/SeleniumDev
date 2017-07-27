@@ -9,12 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class ToursTab {
 
 	static Logger		log	= Logger.getLogger(ToursTab.class);
 
 	private WebDriver	driver;
+	private ExtentTest extentLogger;
 
 	@FindBy(xpath = "//div[@class='container']/ul/li[@data-title='TOURS']")
 	private WebElement	toursTab;
@@ -43,8 +46,9 @@ public class ToursTab {
 	@FindBy(xpath = "//div[@id='TOURS']/div/form/div[5]/div/button")
 	private WebElement	performSearch;
 
-	public ToursTab(WebDriver driver) {
+	public ToursTab(WebDriver driver,ExtentTest extentLogger) {
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
 
 	}
@@ -106,7 +110,28 @@ public class ToursTab {
 
 	public void performPackageSearch() {
 		performSearch.click();
+		extentLogger.log(LogStatus.INFO, "Clicked on search button");
+		extentLogger.log(LogStatus.PASS, "Verified Tours Tab...");
 		log.info("Finished performPackageSearch()");
+	}
+	
+	public void selectTour(){
+		
+		gotoHome();
+		extentLogger.log(LogStatus.INFO, "Selected Home Page");
+		selectToursTab();
+		extentLogger.log(LogStatus.INFO, "Selected Tours Tab");
+		selectDestinationLocation("Cairo");
+		extentLogger.log(LogStatus.INFO, "Selected location");
+		selectCheckInDateTxtBox();
+		clickNextMonthIcon();
+		selectCheckInDate();
+		extentLogger.log(LogStatus.INFO, "Selected check-in date");
+		selectNumOfAdultDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Selected number of adults");
+		selectTourTypeDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Selected type of tour");
+		extentLogger.log(LogStatus.INFO, "Selected all fields before search");
 	}
 
 }

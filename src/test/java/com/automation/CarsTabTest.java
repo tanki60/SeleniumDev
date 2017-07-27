@@ -1,11 +1,9 @@
 package com.automation;
 
-import com.automation.base.BaseSuite;
-import com.automation.dto.CarsTab;
-
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+import com.automation.base.BaseSuite;
+import com.automation.dto.CarsTab;
 
 /**
  * 
@@ -18,34 +16,15 @@ public class CarsTabTest extends BaseSuite {
 	CarsTab	carsTab;
 
 	@Test(priority = 0)
-	public void selectCar() {
+	public void car() {
 
-		carsTab = new CarsTab(driver);
-		carsTab.gotoHome();
-		extentLogger.log(LogStatus.INFO, "Selected Home Page");
-		carsTab.selectCarsTab();
-		extentLogger.log(LogStatus.INFO, "Selected Cars Tab");
-		carsTab.selectPickUpLocation();
-		extentLogger.log(LogStatus.INFO, "Selected PickUp Location");
-		carsTab.selectPickUpDateTxtBox();
-		carsTab.clickPickUpMonthIcon();
-		carsTab.selectPickUpDate();
-		extentLogger.log(LogStatus.INFO, "Selected PickUp Date");
-		carsTab.selectPickUpTimeDrpDwn();
-		extentLogger.log(LogStatus.INFO, "Selected PickUp Time");
-		carsTab.selectDrofOffDateTxtBox();
-		carsTab.clickDropOffMonthIcon();
-		carsTab.clickDropOffMonthIcon();
-		carsTab.selectDropOffDate();
-		extentLogger.log(LogStatus.INFO, "Selected Drop-Off Date");
-		carsTab.selectDropOffTimeDrpDwn();
-		extentLogger.log(LogStatus.INFO, "Selected Drop-Off Time");
-		extentLogger.log(LogStatus.PASS, "Verified Tab....");
+		carsTab = new CarsTab(driver,extentLogger);
+		carsTab.selectCar();
 
 	}
 
 	@Test(enabled = false, dependsOnMethods = { "selectCar" })
-	public void SearchCar() {
+	public void searchCar() {
 
 		carsTab.searchCarResults();
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[About to begin executing Suite Regression Suite]]>
+      <![CDATA[Completed executing test Regression Suite]]>
     </line>
     <line>
-      <![CDATA[About to begin executing Test HomePage all Tabs]]>
+      <![CDATA[Completed executing test HomePage Hotels Tab]]>
     </line>
     <line>
       <![CDATA[About to begin executing following method : BaseSuite.beforeClass]]>
@@ -14,28 +14,16 @@
       <![CDATA[Completed executing following method : BaseSuite.beforeClass]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : CaseThreeTest.featuredHotel]]>
+      <![CDATA[Completed executing test car]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : CaseThreeTest.featuredHotel]]>
+      <![CDATA[About to begin executing following method : CarsTabTest.car]]>
     </line>
     <line>
-      <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
+      <![CDATA[Completed executing following method : CarsTabTest.car]]>
     </line>
     <line>
-      <![CDATA[Test Status: Pass]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : CaseThreeTest.continueAsGuest]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : CaseThreeTest.continueAsGuest]]>
-    </line>
-    <line>
-      <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
-    </line>
-    <line>
-      <![CDATA[Test Status: Pass]]>
+      <![CDATA[Completed executing test car]]>
     </line>
     <line>
       <![CDATA[About to begin executing following method : BaseSuite.afterClass]]>
@@ -44,12 +32,12 @@
       <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
     </line>
   </reporter-output>
-  <suite name="Regression Suite" duration-ms="62453" started-at="2017-06-20T16:56:07Z" finished-at="2017-06-20T16:57:09Z">
+  <suite name="Regression Suite" duration-ms="50888" started-at="2017-07-27T12:31:31Z" finished-at="2017-07-27T12:32:22Z">
     <groups>
     </groups>
-    <test name="HomePage all Tabs" duration-ms="62453" started-at="2017-06-20T16:56:07Z" finished-at="2017-06-20T16:57:09Z">
-      <class name="com.automation.CaseThreeTest">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="beforeClass" is-config="true" duration-ms="24641" started-at="2017-06-20T12:56:07Z" finished-at="2017-06-20T12:56:31Z">
+    <test name="HomePage Hotels Tab" duration-ms="50888" started-at="2017-07-27T12:31:31Z" finished-at="2017-07-27T12:32:22Z">
+      <class name="com.automation.CarsTabTest">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.CarsTabTest@3c1145a4]" name="beforeClass" is-config="true" duration-ms="35519" started-at="2017-07-27T08:31:31Z" finished-at="2017-07-27T08:32:07Z">
           <params>
             <param index="0">
               <value>
@@ -63,40 +51,24 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="featuredHotel()[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="featuredHotel" duration-ms="15461" started-at="2017-06-20T12:56:31Z" finished-at="2017-06-20T12:56:47Z">
+        <test-method status="PASS" signature="car()[pri:0, instance:com.automation.CarsTabTest@3c1145a4]" name="car" duration-ms="11411" started-at="2017-07-27T08:32:07Z" finished-at="2017-07-27T08:32:18Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : CaseThreeTest.featuredHotel]]>
+              <![CDATA[Completed executing following method : CarsTabTest.car]]>
             </line>
             <line>
-              <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
-            </line>
-            <line>
-              <![CDATA[Test Status: Pass]]>
+              <![CDATA[Completed executing test car]]>
             </line>
           </reporter-output>
-        </test-method> <!-- featuredHotel -->
-        <test-method status="PASS" signature="continueAsGuest()[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="continueAsGuest" duration-ms="18799" started-at="2017-06-20T12:56:47Z" depends-on-methods="com.automation.CaseThreeTest.featuredHotel" finished-at="2017-06-20T12:57:06Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : CaseThreeTest.continueAsGuest]]>
-            </line>
-            <line>
-              <![CDATA[Test Method resides in com.automation.CaseThreeTest]]>
-            </line>
-            <line>
-              <![CDATA[Test Status: Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- continueAsGuest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.CaseThreeTest@773cf42a]" name="afterClass" is-config="true" duration-ms="3518" started-at="2017-06-20T12:57:06Z" finished-at="2017-06-20T12:57:09Z">
+        </test-method> <!-- car -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.CarsTabTest@3c1145a4]" name="afterClass" is-config="true" duration-ms="3875" started-at="2017-07-27T08:32:18Z" finished-at="2017-07-27T08:32:22Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automation.CaseThreeTest -->
-    </test> <!-- HomePage all Tabs -->
+      </class> <!-- com.automation.CarsTabTest -->
+    </test> <!-- HomePage Hotels Tab -->
   </suite> <!-- Regression Suite -->
 </testng-results>

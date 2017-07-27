@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 /*
  * This is the landing page for Kayak.com, which by default is Hotels tab
@@ -17,6 +19,7 @@ public class HotelsTab {
 	static Logger		log	= Logger.getLogger(HotelsTab.class);
 
 	private WebDriver	driver;
+	private ExtentTest	extentLogger;
 
 	@FindBy(xpath = "//div[contains(@id,'s2id') and contains(@class,'hotelsearch')]/a")
 	WebElement			hotelTextBox;
@@ -63,9 +66,10 @@ public class HotelsTab {
 	@FindBy(css = ".btn-warning.btn.btn-lg.btn-block")
 	WebElement			performHotelSearch;
 
-	public HotelsTab(WebDriver webDriver) {
+	public HotelsTab(WebDriver webDriver, ExtentTest extentLogger) {
 
 		this.driver = webDriver;
+		this.extentLogger = extentLogger;
 		PageFactory.initElements(webDriver, this);
 
 	}
@@ -92,12 +96,6 @@ public class HotelsTab {
 		GenericMethods.selectListOptionsByIndex(driver, "//div[@id='select2-drop']/ul/li/ul/li", 1);
 
 		log.info("Inside setHotelNameInput: " + hotelName);
-	}
-
-	public void searchFoResults() {
-		this.performHotelSearch.click();
-		log.info("searchFoResults clicked");
-
 	}
 
 	public void selectNumOfChildDrpDwn() {
@@ -155,6 +153,36 @@ public class HotelsTab {
 
 	public void clickOnDefaultArea() {
 		airClick.click();
+	}
+
+	public void selectHotel() {
+
+		gotoHome();
+		extentLogger.log(LogStatus.INFO, "Selected Home Page");
+		selectHotelTab();
+		extentLogger.log(LogStatus.INFO, "Selected Hotels Tab");
+		setHotelName();
+		setHotelNameInput("new");
+		extentLogger.log(LogStatus.INFO, "Selected name");
+		selectNumOfChildDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Selected number of children");
+		selectNumOfAdultDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Selected number of adult");
+		selectCalenderStartIcon();
+		extentLogger.log(LogStatus.INFO, "Selected Arrival date");
+		selectCalenderEndIcon();
+		clickOnDefaultArea();
+		extentLogger.log(LogStatus.INFO, "Selected departure date");
+		extentLogger.log(LogStatus.INFO, "Selected all fields before search");
+
+	}
+
+	public void searchFoResults() {
+		this.performHotelSearch.click();
+		extentLogger.log(LogStatus.INFO, "Clicked hotel search button");
+		extentLogger.log(LogStatus.PASS, "Verified Hotels Tab...");
+		log.info("searchFoResults clicked");
+
 	}
 
 }

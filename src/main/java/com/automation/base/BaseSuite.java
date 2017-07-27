@@ -63,15 +63,13 @@ public class BaseSuite {
 
 	@AfterClass
 	public void afterClass() {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (null != driver){
+			driver.quit();
+			driver = null;
+			reports.endTest(extentLogger);
+			reports.flush();
 		}
-		driver.quit();
-		reports.endTest(extentLogger);
-		reports.flush();
+		
 	}
 
 }

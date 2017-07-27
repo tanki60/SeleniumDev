@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Regression_Suite">
-                    <span>C:\Users\Tanky\workspace\SiteAutomation\test-suites\caseThree.xml</span>
+                    <span>C:\Users\Tanky\workspace\SiteAutomation\test-suites\smoke.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,7 @@
                     <div class="method-list-content passed suite-Regression_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="com.automation.CaseThreeTest" hash-for-method="continueAsGuest">continueAsGuest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="com.automation.CaseThreeTest" hash-for-method="featuredHotel">featuredHotel</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="com.automation.CarsTabTest" hash-for-method="car">car</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Regression_Suite -->
@@ -124,21 +119,14 @@
           <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.automation.CaseThreeTest</span>
+              <span class="class-name">com.automation.CarsTabTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="continueAsGuest">
-                  </a> <!-- continueAsGuest -->
-                  <span class="method-name">continueAsGuest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="featuredHotel">
-                  </a> <!-- featuredHotel -->
-                  <span class="method-name">featuredHotel</span>
+                  <a name="car">
+                  </a> <!-- car -->
+                  <span class="method-name">car</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,7 +134,7 @@
         </div> <!-- panel Regression_Suite -->
         <div panel-name="test-xml-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Tanky\workspace\SiteAutomation\test-suites\caseThree.xml</span>
+            <span class="header-content">C:\Users\Tanky\workspace\SiteAutomation\test-suites\smoke.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -157,11 +145,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.automation.listeners.CommonListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;HomePage all Tabs&quot;&gt;
+  &lt;test name=&quot;HomePage Hotels Tab&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.CaseThreeTest&quot;/&gt;
+      &lt;class name=&quot;com.automation.CarsTabTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- HomePage all Tabs --&gt;
+  &lt;/test&gt; &lt;!-- HomePage Hotels Tab --&gt;
 &lt;/suite&gt; &lt;!-- Regression Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +161,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">HomePage all Tabs (1 class)</span>
+                <span class="test-name">HomePage Hotels Tab (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,20 +187,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'continueAsGuest')
-data.setCell(0, 2, 'com.automation.CaseThreeTest')
-data.setCell(0, 3, 18799);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'featuredHotel')
-data.setCell(1, 2, 'com.automation.CaseThreeTest')
-data.setCell(1, 3, 15461);
+data.setCell(0, 1, 'car')
+data.setCell(0, 2, 'com.automation.CarsTabTest')
+data.setCell(0, 3, 11411);
 window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Regression_Suite">
               </div> <!-- times-div-Regression_Suite -->
             </div> <!-- times-div -->
@@ -224,28 +208,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">continueAsGuest</span>
+              <span class="reporter-method-name">car</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Completed executing following method : CaseThreeTest.continueAsGuest</span>
-                <span class="reporter-method-output">Test Method resides in com.automation.CaseThreeTest</span>
-                <span class="reporter-method-output">Test Status: Pass</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">featuredHotel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Completed executing following method : CaseThreeTest.featuredHotel</span>
-                <span class="reporter-method-output">Test Method resides in com.automation.CaseThreeTest</span>
-                <span class="reporter-method-output">Test Status: Pass</span>
+                <span class="reporter-method-output">Completed executing following method : CarsTabTest.car</span>
+                <span class="reporter-method-output">Completed executing test car</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.automation.CarsTabTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">searchCar</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Regression_Suite" class="panel">
@@ -254,22 +236,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.CaseThreeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.CarsTabTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass(Firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">featuredHotel</span>
-                <span class="method-start">24649 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">continueAsGuest</span>
-                <span class="method-start">40117 ms</span>
+                <span class="method-name">car</span>
+                <span class="method-start">35539 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">58920 ms</span>
+                <span class="method-start">46962 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

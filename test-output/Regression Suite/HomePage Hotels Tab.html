@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>HomePage Hotels Tab</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 20 08:58:42 EDT 2017</td>
+<td>Started on:</td><td>Thu Jul 27 08:31:31 EDT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27793 ms)</td>
+<tr><td>Total time:</td><td>50 seconds (50888 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,93 +67,26 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.automation.CaseTwoTest.selectHotel()'><b>selectHotel</b><br>Test class: com.automation.CaseTwoTest<br/>
-<a href="#Output-1564035725" onClick='toggleBox("Output-1564035725", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.automation.CarsTabTest.car()'><b>car</b><br>Test class: com.automation.CarsTabTest<br/>
+<a href="#Output-1503674351" onClick='toggleBox("Output-1503674351", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1564035725" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1564035725">
-Completed executing following method : CaseTwoTest.selectHotel<br/>
-Test Method resides in com.automation.CaseTwoTest<br/>
-Test Status: Failed<br/>
+<a href="#Output-1503674351" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1503674351">
+Completed executing following method : CarsTabTest.car<br/>
+Completed executing test car<br/>
 </div>
 </td>
-<td><div><pre>java.lang.NullPointerException
-	at com.automation.util.GenericMethods.selectByLinkText(GenericMethods.java:360)
-	at com.automation.dto.HotelsTab.gotoHome(HotelsTab.java:74)
-	at com.automation.CaseTwoTest.selectHotel(CaseTwoTest.java:23)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1564035725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1564035725'><pre>java.lang.NullPointerException
-	at com.automation.util.GenericMethods.selectByLinkText(GenericMethods.java:360)
-	at com.automation.dto.HotelsTab.gotoHome(HotelsTab.java:74)
-	at com.automation.CaseTwoTest.selectHotel(CaseTwoTest.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div></td>
-<td>0</td>
-<td>com.automation.CaseTwoTest@7c271d34</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.automation.CaseTwoTest.modifyResults()'><b>modifyResults</b><br>Test class: com.automation.CaseTwoTest</td>
-<td><div><pre>java.lang.Throwable: Method CaseTwoTest.modifyResults()[pri:0, instance:com.automation.CaseTwoTest@7c271d34] depends on not successfully finished methods
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2047836745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2047836745'><pre>java.lang.Throwable: Method CaseTwoTest.modifyResults()[pri:0, instance:com.automation.CaseTwoTest@7c271d34] depends on not successfully finished methods
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
+<td></td>
+<td>11</td>
+<td>com.automation.CarsTabTest@3c1145a4</td></tr>
 </table><p>
 </body>
 </html>

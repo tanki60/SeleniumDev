@@ -7,14 +7,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class UpdateNewUserProfile {
 
 	static Logger		log	= Logger.getLogger(UpdateNewUserProfile.class);
 
 	private WebDriver	driver;
+	private ExtentTest 	extentLogger;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/a")
 	WebElement			signUpOption;
@@ -49,13 +53,13 @@ public class UpdateNewUserProfile {
 	@FindBy(xpath = "//div[@class='accountresult']/div")
 	WebElement			successMsg;
 
-	public UpdateNewUserProfile(WebDriver driver) {
+	public UpdateNewUserProfile(WebDriver driver, ExtentTest extentLogger) {
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
-		// TODO Auto-generated constructor stub
 	}
 
-	public void setSelectAccountUpdate() {
+	public void selectAccountUpdate() {
 		GenericMethods.javaScriptClickByPath(driver, "//div[@class='navbar-collapse collapse']/ul/li[2]/a", true);
 		try {
 			Thread.sleep(2000);
@@ -69,10 +73,7 @@ public class UpdateNewUserProfile {
 
 	}
 
-	public void setClickMyProfile() {
-		// GenericMethods.selectListOptionsByTagValue(driver,
-		// "//div[@class='col-md-1 offset-0']/ul/li/a", "#profile",
-		// "href");
+	public void clickMyProfile() {
 		clickMyProfile.click();
 		log.info("Clicked My Profile");
 	}
@@ -120,6 +121,30 @@ public class UpdateNewUserProfile {
 		}
 
 		return isSuccess;
+	}
+	
+	public void updateProfile(){
+		
+		selectAccountUpdate();
+		extentLogger.log(LogStatus.INFO, "Selected Account option");
+		clickMyProfile();
+		extentLogger.log(LogStatus.INFO, "Selected My Profile");
+		setAddressOne();
+		extentLogger.log(LogStatus.INFO, "Provided Address One");
+		setAddressTwo();
+		extentLogger.log(LogStatus.INFO, "Provided Address Two");
+		setCity();
+		extentLogger.log(LogStatus.INFO, "Provided City");
+		setState();
+		extentLogger.log(LogStatus.INFO, "Provided State");
+		setZip();
+		extentLogger.log(LogStatus.INFO, "Provided Zip");
+		setCountryDropDwn();
+		extentLogger.log(LogStatus.INFO, "Selected Country");
+		submitInfo();
+		extentLogger.log(LogStatus.INFO, "Submitted updated user profile");
+		Assert.assertTrue(confirmSuccessMsg());
+		extentLogger.log(LogStatus.PASS, "Successfully updated profile information....");
 	}
 
 }

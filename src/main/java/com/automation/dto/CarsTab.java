@@ -9,12 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
-public class CarsTab {
+public class CarsTab{
 
 	static Logger		log	= Logger.getLogger(CarsTab.class);
 
 	private WebDriver	driver;
+	private ExtentTest extentLogger;
 
 	@FindBy(xpath = "//a[@href='#CARS']")
 	private WebElement	carsTab;
@@ -50,8 +53,9 @@ public class CarsTab {
 	@FindBy(xpath = "//div[@id='CARS']//button[@type='submit']")
 	private WebElement	searchCars;
 
-	public CarsTab(WebDriver driver) {
+	public CarsTab(WebDriver driver, ExtentTest extentLogger) {
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
 
 	}
@@ -131,7 +135,32 @@ public class CarsTab {
 	public void searchCarResults() {
 
 		searchCars.click();
+		extentLogger.log(LogStatus.PASS, "Verified Tab....");
 		log.info("Finished searchCarResults()");
+	}
+	
+	public void selectCar(){
+		
+		gotoHome();
+		extentLogger.log(LogStatus.INFO, "Selected Home Page");
+		selectCarsTab();
+		extentLogger.log(LogStatus.INFO, "Selected Cars Tab");
+		selectPickUpLocation();
+		extentLogger.log(LogStatus.INFO, "Selected PickUp Location");
+		selectPickUpDateTxtBox();
+		clickPickUpMonthIcon();
+		selectPickUpDate();
+		extentLogger.log(LogStatus.INFO, "Selected PickUp Date");
+		selectPickUpTimeDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Selected PickUp Time");
+		selectDrofOffDateTxtBox();
+		clickDropOffMonthIcon();
+		clickDropOffMonthIcon();
+		selectDropOffDate();
+		extentLogger.log(LogStatus.INFO, "Selected Drop-Off Date");
+		selectDropOffTimeDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Selected Drop-Off Time");
+		extentLogger.log(LogStatus.INFO, "Selected all fields before car search");
 	}
 
 }

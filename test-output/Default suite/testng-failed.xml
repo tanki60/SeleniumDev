@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.automation.CaseThreeTest">
+      <class name="com.automation.CarsTabTest">
         <methods>
-          <include name="continueAsGuest"/>
-          <include name="featuredHotel"/>
+          <include name="car"/>
         </methods>
-      </class> <!-- com.automation.CaseThreeTest -->
+      </class> <!-- com.automation.CarsTabTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,11 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 public class FlightsTab {
 
 	static Logger		log	= Logger.getLogger(FlightsTab.class);
 
 	private WebDriver	driver;
+	private ExtentTest	extentLogger;
 
 	@FindBy(xpath = "//a[@href='#TRAVELPAYOUTS']")
 	private WebElement	flightsTab;
@@ -54,8 +58,9 @@ public class FlightsTab {
 	@FindBy(xpath = "//button[@role='flights_submit']")
 	private WebElement	performFlightSearch;
 
-	public FlightsTab(WebDriver driver) {
+	public FlightsTab(WebDriver driver,ExtentTest extentLogger) {
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
 
 	}
@@ -132,7 +137,27 @@ public class FlightsTab {
 
 		performFlightSearch.click();
 
+		extentLogger.log(LogStatus.INFO, "Clicked flight search button");
 		log.info("Selected method searchFlights()");
 
+	}
+
+	public void selectFlight() {
+		gotoHome();
+		extentLogger.log(LogStatus.INFO, "Selected Home Page");
+		selectFlightsTab();
+		extentLogger.log(LogStatus.INFO, "Selected Flights Tab");
+		selectFlyingFrom();
+		extentLogger.log(LogStatus.INFO, "Selected departure ");
+		selectFlyingTo();
+		extentLogger.log(LogStatus.INFO, "Selected arrival ");
+		selectDepatureDate();
+		extentLogger.log(LogStatus.INFO, "Selected departure date ");
+		selectReturnDate();
+		extentLogger.log(LogStatus.INFO, "Selected return date ");
+		selectNumOfAdultDrpDwn();
+		setNumOfAdultOkBtn();
+		extentLogger.log(LogStatus.INFO, "Selected number of passengers ");
+		extentLogger.log(LogStatus.PASS, "Verified Flights Tab....");
 	}
 }

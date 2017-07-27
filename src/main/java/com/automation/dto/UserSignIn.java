@@ -7,14 +7,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class UserSignIn {
 
 	static Logger		log	= Logger.getLogger(UserSignIn.class);
 
 	private WebDriver	driver;
+	private ExtentTest	extentLogger;
 
 	@FindBy(xpath = "//div[@class='navbar-collapse collapse']/ul/li[2]/a")
 	WebElement			myAccountDrpDwn;
@@ -31,9 +35,10 @@ public class UserSignIn {
 	@FindBy(css = "button.btn.btn-action.btn-block.loginbtn")
 	WebElement			sigInBtn;
 
-	public UserSignIn(WebDriver driver) {
+	public UserSignIn(WebDriver driver, ExtentTest extentLogger) {
 
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
 
 		log.info("Init page factory");
@@ -79,6 +84,23 @@ public class UserSignIn {
 		}
 		System.out.println("**" + username + "**");
 		return isCorrectName;
+	}
+	
+	public void signIn(){
+		
+		clickMyAccountDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Clicked My Account drop down");
+		clickSignInOption();
+		extentLogger.log(LogStatus.INFO, "Picked Sign-In option");
+		setUserEmail();
+		extentLogger.log(LogStatus.INFO, "Entered user email");
+		setPassowrd();
+		extentLogger.log(LogStatus.INFO, "Entered user password");
+		clickSigInBtn();
+		extentLogger.log(LogStatus.INFO, "Clicked Sign-In botton");
+
+		Assert.assertTrue(confirmLogInName());
+		extentLogger.log(LogStatus.PASS, "Successfully signed-in...");
 	}
 
 }
