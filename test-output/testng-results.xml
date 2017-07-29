@@ -5,13 +5,13 @@
       <![CDATA[Completed executing test Regression Suite]]>
     </line>
     <line>
-      <![CDATA[Completed executing test HomePage Hotels Tab]]>
+      <![CDATA[Completed executing test SomeTest]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BaseSuite.beforeClass]]>
+      <![CDATA[About to begin executing following method : BaseSuiteIT.beforeClass]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BaseSuite.beforeClass]]>
+      <![CDATA[Completed executing following method : BaseSuiteIT.beforeClass]]>
     </line>
     <line>
       <![CDATA[Completed executing test car]]>
@@ -26,32 +26,32 @@
       <![CDATA[Completed executing test car]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BaseSuite.afterClass]]>
+      <![CDATA[About to begin executing following method : BaseSuiteIT.afterClass]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
+      <![CDATA[Completed executing following method : BaseSuiteIT.afterClass]]>
     </line>
   </reporter-output>
-  <suite name="Regression Suite" duration-ms="50888" started-at="2017-07-27T12:31:31Z" finished-at="2017-07-27T12:32:22Z">
+  <suite name="Regression Suite" duration-ms="43137" started-at="2017-07-29T00:50:41Z" finished-at="2017-07-29T00:51:25Z">
     <groups>
     </groups>
-    <test name="HomePage Hotels Tab" duration-ms="50888" started-at="2017-07-27T12:31:31Z" finished-at="2017-07-27T12:32:22Z">
-      <class name="com.automation.CarsTabTest">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.CarsTabTest@3c1145a4]" name="beforeClass" is-config="true" duration-ms="35519" started-at="2017-07-27T08:31:31Z" finished-at="2017-07-27T08:32:07Z">
+    <test name="SomeTest" duration-ms="43137" started-at="2017-07-29T00:50:41Z" finished-at="2017-07-29T00:51:25Z">
+      <class name="com.automation.unit.CarsTabTest">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.automation.unit.CarsTabTest@3c1145a4]" name="beforeClass" is-config="true" duration-ms="28230" started-at="2017-07-28T20:50:41Z" finished-at="2017-07-28T20:51:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Firefox]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : BaseSuite.beforeClass]]>
+              <![CDATA[Completed executing following method : BaseSuiteIT.beforeClass]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="car()[pri:0, instance:com.automation.CarsTabTest@3c1145a4]" name="car" duration-ms="11411" started-at="2017-07-27T08:32:07Z" finished-at="2017-07-27T08:32:18Z">
+        <test-method status="PASS" signature="car()[pri:0, instance:com.automation.unit.CarsTabTest@3c1145a4]" name="car" duration-ms="12550" started-at="2017-07-28T20:51:10Z" finished-at="2017-07-28T20:51:22Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : CarsTabTest.car]]>
@@ -61,14 +61,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- car -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.CarsTabTest@3c1145a4]" name="afterClass" is-config="true" duration-ms="3875" started-at="2017-07-27T08:32:18Z" finished-at="2017-07-27T08:32:22Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.automation.unit.CarsTabTest@3c1145a4]" name="afterClass" is-config="true" duration-ms="2303" started-at="2017-07-28T20:51:22Z" finished-at="2017-07-28T20:51:25Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : BaseSuite.afterClass]]>
+              <![CDATA[Completed executing following method : BaseSuiteIT.afterClass]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automation.CarsTabTest -->
-    </test> <!-- HomePage Hotels Tab -->
+      </class> <!-- com.automation.unit.CarsTabTest -->
+    </test> <!-- SomeTest -->
   </suite> <!-- Regression Suite -->
 </testng-results>

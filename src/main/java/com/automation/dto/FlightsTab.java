@@ -138,6 +138,7 @@ public class FlightsTab {
 		performFlightSearch.click();
 
 		extentLogger.log(LogStatus.INFO, "Clicked flight search button");
+		extentLogger.log(LogStatus.PASS, "Verified Flights Tab....");
 		log.info("Selected method searchFlights()");
 
 	}
@@ -158,6 +159,7 @@ public class FlightsTab {
 		selectNumOfAdultDrpDwn();
 		setNumOfAdultOkBtn();
 		extentLogger.log(LogStatus.INFO, "Selected number of passengers ");
-		extentLogger.log(LogStatus.PASS, "Verified Flights Tab....");
+		extentLogger.log(LogStatus.INFO, "Selected required options before search");
+		
 	}
 }

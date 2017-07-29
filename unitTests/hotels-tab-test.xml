@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+	<parameter name="browser" value="firefox" />
+	<listeners>
+		<listener class-name="com.automation.listeners.CommonListener"></listener>
+	</listeners>
+	<test name="SomeTest" preserve-order="true" verbose="1">
+		<classes>
+			<class name="com.automation.unit.HotelsTabTest" />
+		</classes>
+	</test>
+</suite>

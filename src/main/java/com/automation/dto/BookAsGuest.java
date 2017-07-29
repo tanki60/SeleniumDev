@@ -7,15 +7,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.automation.constants.SiteConstants;
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class BookAsGuest {
 
 	static Logger		log	= Logger.getLogger(BookAsGuest.class);
 
 	private WebDriver	driver;
+	private ExtentTest extentLogger;
 
 	@FindBy(xpath = "//a[@id='guesttab']")
 	private WebElement	asGuestBtn;
@@ -57,8 +61,9 @@ public class BookAsGuest {
 	@FindBy(xpath = "//b[contains(@class,'wow flash animted animated')]")
 	private WebElement	confirmSuccessMsg;
 
-	public BookAsGuest(WebDriver driver) {
+	public BookAsGuest(WebDriver driver, ExtentTest extentLogger) {
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
 
 	}
@@ -147,5 +152,33 @@ public class BookAsGuest {
 
 	public boolean confirmSuccessMsg() {
 		return confirmSuccessMsg.isDisplayed();
+	}
+	
+	public void pickBookAsGuest(){
+		
+		clickAsGuestBtn();
+		extentLogger.log(LogStatus.INFO, "Selected Guest option");
+		setFirstName();
+		extentLogger.log(LogStatus.INFO, "Typed first name");
+		setLastName();
+		extentLogger.log(LogStatus.INFO, "Typed last name");
+		setEmailAndConfirm();
+		extentLogger.log(LogStatus.INFO, "Typed and confirmed email");
+		setAddress();
+		extentLogger.log(LogStatus.INFO, "Typed address");
+		setMobile();
+		extentLogger.log(LogStatus.INFO, "Typed phone number");
+		clikAndSelectCountry();
+		extentLogger.log(LogStatus.INFO, "Selected Country");
+		addExtras();
+		extentLogger.log(LogStatus.INFO, "Added extra options");
+		clickCompleteBookingBtn();
+		extentLogger.log(LogStatus.INFO, "Clicked complete booking");
+		selectPayOnArrival();
+		extentLogger.log(LogStatus.INFO, "Selected Pay of Arrival option");
+		selectPopUp();
+		extentLogger.log(LogStatus.INFO, "Closed pop up");
+		Assert.assertTrue(confirmSuccessMsg(), "Sucessfully Booked!...");
+		extentLogger.log(LogStatus.PASS, "Booking Completed...");
 	}
 }

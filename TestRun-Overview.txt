@@ -3,12 +3,12 @@
 #Location: test-suites folder
 
 
-#caseOne.xml
+#caseOneIT.xml
 -Register New User
 -Update User Profile
 -Sign Out
 
-#caseTwo.xml
+#caseTwoIT.xml
 -Goto home page
 -Select Hotels tab
 -Search
@@ -16,15 +16,9 @@
 -Search
 -Confirm output
 
-#caseThree.xml
+#caseThreeIT.xml
 -Goto home page
 -Select Featured HOtel Deals
 -Update Search options
 -Book as Guest by adding info
 -Confirm booking
-
-#smoke.xml (in-progress)
--Goto Home
--Click on Tab for Hotel, Car, Tours, Flight one at a time
--Fill in Details
--Sign Out

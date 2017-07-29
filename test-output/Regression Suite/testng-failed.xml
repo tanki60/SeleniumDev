@@ -5,16 +5,16 @@
   <listeners>
     <listener class-name="com.automation.listeners.CommonListener"/>
   </listeners>
-  <test name="HomePage all Tabs(failed)">
+  <test name="HomePage Hotels Tab(failed)">
     <classes>
-      <class name="com.automation.CaseThreeTest">
+      <class name="com.automation.CaseTwoTest">
         <methods>
-          <include name="continueAsGuest"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
-          <include name="featuredHotel"/>
+          <include name="selectHotel"/>
+          <include name="modifyResults"/>
         </methods>
-      </class> <!-- com.automation.CaseThreeTest -->
+      </class> <!-- com.automation.CaseTwoTest -->
     </classes>
-  </test> <!-- HomePage all Tabs(failed) -->
+  </test> <!-- HomePage Hotels Tab(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

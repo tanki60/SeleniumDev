@@ -8,12 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automation.constants.SiteConstants;
 import com.automation.util.GenericMethods;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class FeaturedHotels {
 
 	static Logger		log	= Logger.getLogger(FeaturedHotels.class);
 
 	private WebDriver	driver;
+	private ExtentTest	extentLogger;
 
 	@FindBy(xpath = "//div[@class='bgwhite']/div/div[2]/div[4]")
 	private WebElement	hotelImg;
@@ -46,9 +49,10 @@ public class FeaturedHotels {
 	private WebElement	guestAge;
 
 
-	public FeaturedHotels(WebDriver driver) {
+	public FeaturedHotels(WebDriver driver, ExtentTest extentLogger) {
 
 		this.driver = driver;
+		this.extentLogger=extentLogger;
 		PageFactory.initElements(driver, this);
 		log.info("Completed custructor FeaturedHotels ");
 	}
@@ -110,6 +114,22 @@ public class FeaturedHotels {
 		guestAge.sendKeys(SiteConstants.FEDTURED_USER_AGE);
 		log.info("Completed setGuestAge ");
 
+	}
+	
+	public void pickFeturedHotelOptions(){
+		
+		selectFeaturedHotel();
+		extentLogger.log(LogStatus.INFO, "Clicked on featured hotel deal");
+		selectAdultDrpDwn();
+		extentLogger.log(LogStatus.INFO, "Clicked on number of adults drop down");
+		modifyResults();
+		extentLogger.log(LogStatus.INFO, "Updated the result by clicking Modify button");
+		viewDetails();
+		extentLogger.log(LogStatus.INFO, "Viewed hotel details");
+		viewAvailability();
+		extentLogger.log(LogStatus.INFO, "Confirmed hotel availability");
+		clickBookNow();
+		extentLogger.log(LogStatus.PASS, "Clicked on book now button");
 	}
 
 	

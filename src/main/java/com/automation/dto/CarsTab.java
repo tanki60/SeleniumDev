@@ -135,6 +135,7 @@ public class CarsTab{
 	public void searchCarResults() {
 
 		searchCars.click();
+		extentLogger.log(LogStatus.INFO, "Clicked on searched button");
 		extentLogger.log(LogStatus.PASS, "Verified Tab....");
 		log.info("Finished searchCarResults()");
 	}
