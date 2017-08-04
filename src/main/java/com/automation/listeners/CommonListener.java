@@ -12,68 +12,65 @@ import org.testng.Reporter;
 
 public class CommonListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
-	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		Reporter.log("Completed executing test " + result.getName(), true);
 
 	}
 
-	@Override
 	public void onTestSuccess(ITestResult result) {
 		Reporter.log("Completed executing test " + result.getName(), true);
 
 	}
 
-	@Override
 	public void onTestFailure(ITestResult result) {
 		Reporter.log("Completed executing test " + result.getName(), true);
 
 	}
 
-	@Override
+
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
 		printTestResults(result);
 
 	}
 
-	@Override
+
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// Reporter.log("Completed executing test " + result.getName(), true);
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 		Reporter.log("Completed executing test " + context.getName(), true);
 
 	}
 
-	@Override
+
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 		Reporter.log("Completed executing test " + context.getName(), true);
 
 	}
 
-	@Override
+
 	public void onStart(ISuite suite) {
 		// TODO Auto-generated method stub
 		Reporter.log("Completed executing test " + suite.getName(), true);
 
 	}
 
-	@Override
+
 	public void onFinish(ISuite suite) {
 		// TODO Auto-generated method stub
 		Reporter.log("Completed executing test " + suite.getName(), true);
 
 	}
 
-	@Override
+
 	public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
 		// TODO Auto-generated method stub
 		String textMsg = "About to begin executing following method : " + returnMethodName(method.getTestMethod());
@@ -82,7 +79,7 @@ public class CommonListener implements ITestListener, ISuiteListener, IInvokedMe
 
 	}
 
-	@Override
+
 	public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
 		// TODO Auto-generated method stub
 		String textMsg = "Completed executing following method : " + returnMethodName(method.getTestMethod());

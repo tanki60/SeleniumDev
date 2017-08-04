@@ -13,10 +13,13 @@ public class SiteConstants {
 	
 	//Browser driver
 	public static final String BROWSER_CHROME_DRIVER="webdriver.chrome.driver";
-	public static final String BROWSER_CHROME_DRIVER_PATH="chromedriver.exe";
+	public static final String BROWSER_CHROME_DRIVER_PATH="C:\\Users\\Tanky\\workspace\\SiteAutomation\\configs\\chromedriver.exe";
 	
 	//Log4J
 	public static final String LOG4J_FILE_LOCATION= "C:\\Users\\Tanky\\workspace\\SiteAutomation\\configs\\log4j.properties";
+	
+	//Application property
+		public static final String APPLICATION_FILE_LOCATION= "C:\\Users\\Tanky\\workspace\\SiteAutomation\\configs\\application.properties";
 	
 	//Generic
 	public static final String CLOSE_HANDLE_WINDOW="CloseNewHandle";

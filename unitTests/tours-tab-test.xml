@@ -1,6 +1,6 @@
 <!-- DOCTYPE line provides intelliSense through testng dtd -->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Suite">
+<suite name="toursTabTest">
 	<parameter name="browser" value="firefox" />
 	<listeners>
 		<listener class-name="com.automation.listeners.CommonListener"></listener>

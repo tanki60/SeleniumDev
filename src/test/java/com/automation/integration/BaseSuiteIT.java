@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.automation.constants.SiteConstants;
@@ -29,7 +30,7 @@ public class BaseSuiteIT {
 
 	@BeforeClass
 	@Parameters({ "browser" })
-	public void beforeClass(String browser) {
+	public void beforeClass(@Optional("chrome")String browser) {
 
 		// get the substring of class name to be used for name of custom reports
 		// generated.
@@ -46,12 +47,12 @@ public class BaseSuiteIT {
 
 		if (browser.equals("firefox")) {
 			driver = new FirefoxDriver();
-		} else if (browser.equals("Chrome")) {
+		} else if (browser.equals("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", SiteConstants.BROWSER_CHROME_DRIVER_PATH);
 			driver = new ChromeDriver();
 		}
-
+		
 		extentLogger.log(LogStatus.INFO, browser + " browser started....");
 		baseUrl = SiteConstants.SITE_BASE_URL;
 		driver.manage().window().maximize();

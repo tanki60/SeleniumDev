@@ -92,9 +92,10 @@ public class BookAsGuest {
 
 	public void setEmailAndConfirm() {
 		email.clear();
-		email.sendKeys(SiteConstants.REGISTER_USER_EMAIL);
+		String fakeEmail = GenericMethods.generateFakeEmail();
+		email.sendKeys(fakeEmail);
 		confirmEmail.clear();
-		confirmEmail.sendKeys(SiteConstants.REGISTER_USER_EMAIL);
+		confirmEmail.sendKeys(fakeEmail);
 		log.info("Completed setEmailAndConfirm ");
 
 	}

@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Suite">
+<suite name="flightsTabTest">
 	<parameter name="browser" value="firefox" />
 	<listeners>
 		<listener class-name="com.automation.listeners.CommonListener"></listener>

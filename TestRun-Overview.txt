@@ -3,12 +3,12 @@
 #Location: test-suites folder
 
 
-#caseOneIT.xml
+#caseOne.xml
 -Register New User
 -Update User Profile
 -Sign Out
 
-#caseTwoIT.xml
+#caseTwo.xml
 -Goto home page
 -Select Hotels tab
 -Search
@@ -16,7 +16,7 @@
 -Search
 -Confirm output
 
-#caseThreeIT.xml
+#caseThree.xml
 -Goto home page
 -Select Featured HOtel Deals
 -Update Search options
